@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Driveway Dreams | Beyond the Horizon</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06f906",
+                        "secondary": "#bc13fe",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#080a0f",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(8, 10, 15, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(6, 249, 6, 0.2);
+        }
+
+        .hud-border {
+            border-left: 2px solid #06f906;
+            border-top: 2px solid #06f906;
+        }
+
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(188, 19, 254, 0.05) 50%);
+            background-size: 100% 4px;
+        }
+
+        .glow-green {
+            text-shadow: 0 0 10px rgba(6, 249, 6, 0.5);
+        }
+
+        .glow-purple {
+            text-shadow: 0 0 10px rgba(188, 19, 254, 0.5);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-x-hidden selection:bg-primary/30">
+    <!-- Top Navigation -->
+    <header
+        class="fixed top-0 w-full z-50 border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-3xl text-secondary">deployed_code</span>
+            <h1 class="text-xl font-bold tracking-tighter uppercase glow-green">Driveway <span
+                    class="text-primary">Dreams</span></h1>
+        </a>
+        <nav class="hidden md:flex items-center gap-10">
+            <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                href="showroom.html">Inventory</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                href="showroom.html">Showroom</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                href="code.html">Technology</a>
+            <a class="text-primary text-sm font-bold uppercase tracking-widest border-b-2 border-primary border-secondary text-secondary"
+                href="about.html">About</a>
+            <a class="text-sm font-bold text-primary transition-colors uppercase tracking-widest"
+                href="videoplayer.html">Watch Now</a>
+        </nav>
+        <div class="flex items-center gap-6">
+            <button class="material-symbols-outlined hover:text-primary transition-colors">search</button>
+            <button
+                class="bg-primary hover:bg-primary/80 text-white px-6 py-2 rounded font-bold text-xs uppercase tracking-widest transition-all">Connect</button>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[90vh] w-full flex items-end justify-start px-6 md:px-20 pb-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent z-10">
+                </div>
+                <img class="w-full h-full object-cover"
+                    data-alt="Futuristic car showroom with minimalist architectural design"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDErGGdU2PlIsQpLPkYHmk4nmWK-FrkQLnWzmXLqiF1eN2qKpG1OxBPmXJXJWknLpjQXRUSkGfyowEfXsv4XGV69HhGk9xqBkmWsBX8GkuuGnf3mcwUmj444YLuD8p1NJH_wrIJ3VPdwAs1OPcEMKVB2y-QDwtrq9lyZhpTTytBCS77_AM1JAFNvf9GOhDdmjezR1pzsf5AruLBjuzhfO90cXJUAE_w2cDS-FIxVXA7MhZkgt1WOQdJixFPEhq5LRs-BAfzJJ-0JQN_" />
+            </div>
+            <div class="relative z-20 max-w-4xl">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-primary/20 border border-primary/30 rounded mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+                    </span>
+                    <span class="text-xs font-bold tracking-[0.2em] text-primary uppercase">Mission Protocol:
+                        2024</span>
+                </div>
+                <h1 class="text-5xl md:text-8xl font-bold leading-[0.9] tracking-tighter uppercase mb-6 glow-green">
+                    Beyond the <br /><span class="italic text-secondary glow-purple">Horizon.</span>
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
+                    We aren't just a dealership. Driveway Dreams is a high-tech conduit for the next era of mobility,
+                    blending aerospace engineering with sustainable luxury.
+                </p>
+            </div>
+        </section>
+        <!-- Stats Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-1 px-6 md:px-20 -mt-10 relative z-30">
+            <div class="glass-panel p-10 border-t-2 border-primary">
+                <span class="material-symbols-outlined text-4xl mb-4 text-secondary">memory</span>
+                <p class="text-slate-400 text-sm uppercase tracking-widest mb-2">Innovation Patents</p>
+                <h3 class="text-5xl font-bold tracking-tighter glow-green">450+</h3>
+                <p class="text-xs text-primary mt-2 font-mono">ENCRYPTED_ASSET_VAULT</p>
+            </div>
+            <div class="glass-panel p-10 border-t-2 border-primary">
+                <span class="material-symbols-outlined text-4xl mb-4 text-secondary">rocket_launch</span>
+                <p class="text-slate-400 text-sm uppercase tracking-widest mb-2">Years Active</p>
+                <h3 class="text-5xl font-bold tracking-tighter glow-green">15</h3>
+                <p class="text-xs text-primary mt-2 font-mono">TIMELINE_ESTABLISHED_2010</p>
+            </div>
+            <div class="glass-panel p-10 border-t-2 border-primary">
+                <span class="material-symbols-outlined text-4xl mb-4 text-secondary">eco</span>
+                <p class="text-slate-400 text-sm uppercase tracking-widest mb-2">Carbon Offset</p>
+                <h3 class="text-5xl font-bold tracking-tighter glow-green">12k <span class="text-2xl">Tons</span></h3>
+                <p class="text-xs text-primary mt-2 font-mono">NET_ZERO_PROTOCOL_V4</p>
+            </div>
+        </section>
+        <!-- The Showroom Section -->
+        <section class="py-32 px-6 md:px-20 grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-sm font-bold tracking-[0.3em] text-primary uppercase mb-4">Engineering Excellence</h2>
+                <h3 class="text-4xl md:text-6xl font-bold tracking-tighter uppercase mb-8 leading-tight glow-green">The
+                    World's Most <span class="text-primary">Advanced</span> Showroom.</h3>
+                <div class="space-y-6 text-slate-400 leading-relaxed font-light">
+                    <p>Our facility is more than a display floor; it's a modular laboratory where automotive dreams are
+                        configured in real-time. Utilizing holographic projectors and AI-driven simulation bays, we
+                        allow you to experience your vehicle before it even leaves the assembly line.</p>
+                    <div class="flex items-start gap-4 p-4 border border-primary/20 rounded-lg bg-primary/5">
+                        <span class="material-symbols-outlined text-secondary">view_in_ar</span>
+                        <div>
+                            <h4 class="text-slate-100 font-bold uppercase text-sm tracking-widest mb-1">Holographic
+                                Configuration</h4>
+                            <p class="text-xs">Visualize millions of color and material combinations in 1:1 scale with
+                                zero latency.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 border border-primary/20 rounded-lg bg-primary/5">
+                        <span class="material-symbols-outlined text-secondary">bolt</span>
+                        <div>
+                            <h4 class="text-slate-100 font-bold uppercase text-sm tracking-widest mb-1">Liquid-Cooled
+                                Charging</h4>
+                            <p class="text-xs">Proprietary infrastructure delivering 500kW ultra-fast charging to all
+                                visitor vehicles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+                <div class="relative rounded-xl overflow-hidden border border-primary/30 group">
+                    <div class="absolute inset-0 scanline opacity-30 pointer-events-none"></div>
+                    <img class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                        data-alt="Modern high-tech garage with neon lighting and luxury electric car"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFxJyrqr659rSv9QG50mkOwLsG8wl6WbivmCt5K4a0y5x6TjJtkAdkGoNOc8epdu_6Uw9YZitq1O5xEvHCwigSEvqPS0UjU6FDsh41I11Yw87XPh6WzwPFg2eNvqxx4DwMgAxmI4uebdsMwV62zEnSizw455c0-RQS9EMB0tVpsE45L90VRIho6C8Kprrvk43NHR7NgcAbirXz8eA6ioH8aYBvgAMzxssfbiswaJMrh39BuGDfvb6Aa7Dsx_ZcEtalNNzt9ypU17xu" />
+                    <div class="absolute bottom-6 left-6 flex gap-4">
+                        <div
+                            class="bg-background-dark/80 backdrop-blur px-4 py-2 border border-primary/50 rounded flex items-center gap-2">
+                            <span class="text-xs font-mono text-primary uppercase tracking-tighter">Lat: 34.0522</span>
+                        </div>
+                        <div
+                            class="bg-background-dark/80 backdrop-blur px-4 py-2 border border-primary/50 rounded flex items-center gap-2">
+                            <span class="text-xs font-mono text-primary uppercase tracking-tighter">Long:
+                                -118.2437</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Timeline / Evolution -->
+        <section class="py-24 bg-primary/5 border-y border-primary/10">
+            <div class="px-6 md:px-20 mb-16 text-center">
+                <h2 class="text-4xl font-bold uppercase tracking-tighter">Our Evolution</h2>
+                <div class="w-20 h-1 mx-auto mt-4 bg-secondary"></div>
+            </div>
+            <div class="max-w-6xl mx-auto px-6 relative">
+                <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-primary/20 hidden md:block"></div>
+                <div class="space-y-16">
+                    <!-- Event 1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                        <div class="md:w-1/2 md:pr-16 text-right order-2 md:order-1">
+                            <h4 class="text-xl font-bold text-white uppercase tracking-tighter">The Genesis</h4>
+                            <p class="text-slate-400 text-sm mt-2">Founded as a boutique design studio focused on
+                                aerodynamics and structural integrity in automotive frames.</p>
+                        </div>
+                        <div
+                            class="relative z-10 w-12 h-12 rounded-full bg-background-dark border-2 border-primary flex items-center justify-center order-1 md:order-2">
+                            <span class="text-[10px] font-bold text-primary font-mono">2010</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16 order-3"></div>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                        <div class="md:w-1/2 md:pr-16 order-3 md:order-1"></div>
+                        <div
+                            class="relative z-10 w-12 h-12 rounded-full bg-background-dark border-2 border-primary flex items-center justify-center order-1 md:order-2">
+                            <span class="text-[10px] font-bold text-primary font-mono">2018</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16 text-left order-2 md:order-3">
+                            <h4 class="text-xl font-bold text-white uppercase tracking-tighter">Digital Pulse</h4>
+                            <p class="text-slate-400 text-sm mt-2">Integration of Neural Networks into vehicle UI and
+                                the opening of our first autonomous test-track.</p>
+                        </div>
+                    </div>
+                    <!-- Event 3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                        <div class="md:w-1/2 md:pr-16 text-right order-2 md:order-1">
+                            <h4 class="text-xl font-bold text-white uppercase tracking-tighter">Zero Emission Era</h4>
+                            <p class="text-slate-400 text-sm mt-2">Transition to 100% carbon-neutral logistics and the
+                                launch of the AERO flagship electric platform.</p>
+                        </div>
+                        <div
+                            class="relative z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center order-1 md:order-2 shadow-[0_0_20px_rgba(37,106,244,0.5)] bg-secondary shadow-[0_0_20px_rgba(188,19,254,0.5)]">
+                            <span class="text-[10px] font-bold text-white font-mono">NOW</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16 order-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sustainability / High Tech Grid -->
+        <section class="py-32 px-6 md:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-lg">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        data-alt="Close up of high-tech robotic car manufacturing arm"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmvVlpcpbJ5l_zjOjtmwx0h0p13Unvo51z4DLSvHHOXUDLj3wwI4Kvqydiy3-5DMDnD6AIjrocvRMF4n65yZXdOnNJ16TDQtWX6ktA49Ho2-ToTGxW3djsgl8Kt00ys8IykirtVGMUscxj-Fh1AQCKqmMm0rBnj7_ml9O2PhxYHNOrmMZE-y1ujmCC43c_NjtR3hCNCEmbAB90-xQSYHfBRj0Tutn31wjf5lNx6xNeBBti_yn3KoIus-Wx5ye39RmOpHdr27A9T4dx" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-60"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h4 class="text-2xl font-bold uppercase tracking-tighter">Precision Assembly</h4>
+                        <p class="text-xs text-primary font-mono mt-1">AUTO_ROBOTIC_FLOW_ENABLED</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        data-alt="Close up of sleek modern car headlights and sensors"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr2RDfuwRm6FgKuOHSFimfjO0CSfLPuZTSakZTBIWKlZ2o_9kErSaH6zGttHvpY6zldIxYVjUu7rp42Xy6i-gJb8oxZE7kkxv7BZqPflWRbx286u2AiCp8a-ySBk6_zXKJCV_FzHF-ASg5mjJ-nTuszmkEyj0JGj059y0cJ1Un8HZVgsX5JOqeU3W7Z57rEnb0BbEoo5SB-gM_Z5I1uHqmYzDhKFiVN7WAD9qiByuZCs3lRDI8tFj1AqGTq9j7ePpTkD07jotjwv0P" />
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+                <div
+                    class="relative group overflow-hidden rounded-lg border border-primary/30 flex items-center justify-center p-8 text-center bg-primary/5">
+                    <div>
+                        <span class="material-symbols-outlined text-5xl mb-4 text-secondary">architecture</span>
+                        <h5 class="font-bold uppercase tracking-widest text-sm mb-2">Sustainable Materials</h5>
+                        <p class="text-xs text-slate-500">Recycled oceanic plastics and cruelty-free bio-leather luxury
+                            interiors.</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2 relative group overflow-hidden rounded-lg">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        data-alt="Electric car charging station in a clean futuristic environment"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsYiCxThZJam9WwaGyrL6AM3FZLhXbuIA93gEdrSIJSDLiFL0a1PIcV2TaZNfBi_GtPR9flCMTNHlsG5gvqxSNH-pTdha6KOg1ERDsK_agpCvaCigO4B2TiPtK-nwf3DaspfrCLKRHAyN6yovOPljWf8PU53jIcJeSpVnbn9_mzzV2n21UyKHsOIS_-Dc3YbuEoCdBvFKVKaMSX5mWbnTeA6NJ9MVczRUcVA0hgu51UOCS02Hnm_2MAeXo5a9ueaMOnaOEvv65gK-2" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h4 class="text-xl font-bold uppercase tracking-tighter">Smart Grid Integration</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-24 px-6 md:px-20 text-center relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-10">
+                <div
+                    class="w-full h-full bg-[radial-gradient(circle,rgba(37,106,244,1)_0%,rgba(16,22,34,1)_70%)] bg-[radial-gradient(circle,rgba(6,249,6,0.8)_0%,rgba(8,10,15,1)_70%)]">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-8 italic">Drive the <span
+                        class="text-primary">Future.</span></h2>
+                <p class="text-slate-400 mb-10 font-light">Experience the Driveway Dreams difference at our flagship
+                    showroom or schedule a virtual walkthrough with our visionary team.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button
+                        class="bg-primary hover:bg-primary/80 text-white px-10 py-4 rounded font-bold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2">
+                        <span>Book Showroom Tour</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                    <button
+                        class="bg-transparent border border-primary/50 hover:bg-primary/10 text-primary px-10 py-4 rounded font-bold uppercase tracking-[0.2em] transition-all">
+                        View Inventory
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="border-t border-primary/10 py-12 px-6 md:px-20 bg-background-dark">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-3xl text-secondary">deployed_code</span>
+                    <h2 class="text-xl font-bold tracking-tighter uppercase">Driveway <span
+                            class="text-primary">Dreams</span></h2>
+                </div>
+                <p class="text-slate-500 max-w-md text-sm leading-relaxed mb-6">
+                    Redefining the automotive experience through digital integration, sustainable manufacturing, and
+                    uncompromising performance. We are Driveway Dreams.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 border border-primary/20 rounded-full flex items-center justify-center hover:border-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a class="w-10 h-10 border border-primary/20 rounded-full flex items-center justify-center hover:border-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">alternate_email</span>
+                    </a>
+                    <a class="w-10 h-10 border border-primary/20 rounded-full flex items-center justify-center hover:border-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">smart_display</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h5 class="text-white font-bold uppercase text-xs tracking-[0.3em] mb-6">Navigation</h5>
+                <ul class="space-y-3 text-slate-500 text-sm">
+                    <li><a class="hover:text-primary transition-colors" href="showroom.html">Showroom</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Innovation Hub</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold uppercase text-xs tracking-[0.3em] mb-6">HQ Terminal</h5>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    Driveway Dreams Innovation Center<br />
+                    Silicon Valley, CA 94025<br />
+                    United States
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-primary/5 text-[10px] font-mono text-slate-600 uppercase tracking-widest">
+            <p>© 2024 Driveway Dreams Corp. All systems operational.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a class="hover:text-primary" href="#">Privacy Policy</a>
+                <a class="hover:text-primary" href="#">Security Protocol</a>
+                <a class="hover:text-primary" href="#">Legal Terms</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

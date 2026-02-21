@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us | Driveway Dreams</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06f906",
+                        "secondary": "#b026ff",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }</script>
+    <style>
+        .neon-glow {
+            box-shadow: 0 0 10px rgba(6, 249, 6, 0.4), 0 0 20px rgba(6, 249, 6, 0.2);
+        }
+
+        .neon-border:focus-within {
+            box-shadow: 0 0 15px rgba(6, 249, 6, 0.6);
+            border-color: #06f906;
+        }
+
+        .hologram-grid {
+            background-size: 30px 30px;
+            background-image: linear-gradient(to right, rgba(176, 38, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(176, 38, 255, 0.1) 1px, transparent 1px);
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(6, 249, 6, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 10px #06f906;
+            pointer-events: none;
+        }
+
+        .social-glow:hover {
+            filter: drop-shadow(0 0 8px #b026ff);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen selection:bg-primary/30">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Navigation -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 backdrop-blur-md sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80">
+                <a href="index.html" class="flex items-center gap-4 text-primary">
+                    <div class="size-8">
+                        <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Driveway
+                        Dreams
+                    </h2>
+                </a>
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-9">
+                        <a class="hover:text-primary transition-colors text-sm font-medium"
+                            href="showroom.html">Showroom</a>
+                        <a class="hover:text-primary transition-colors text-sm font-medium"
+                            href="showroom.html">Inventory</a>
+                        <a class="hover:text-primary transition-colors text-sm font-medium"
+                            href="code.html">Technology</a>
+                        <a class="text-primary text-sm font-bold" href="contact.html">Contact</a>
+                        <a class="text-sm font-bold text-primary transition-colors uppercase tracking-widest"
+                            href="videoplayer.html">Watch Now</a>
+                    </nav>
+                    <button
+                        class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                        Sign In
+                    </button>
+                </div>
+                <button class="md:hidden text-slate-900 dark:text-white">
+                    <span class="material-symbols-outlined text-secondary">menu</span>
+                </button>
+            </header>
+            <main class="flex-1 px-6 lg:px-20 py-12 max-w-7xl mx-auto w-full">
+                <!-- Hero Header -->
+                <div class="mb-12">
+                    <h1 class="text-4xl md:text-6xl font-bold dark:text-white mb-4 tracking-tighter">
+                        Connect with <span class="text-primary">the Future</span>
+                    </h1>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-2xl text-lg">
+                        Have a question about our autonomous fleet or bespoke electric upgrades? Our specialists are
+                        ready to transmit answers.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Left Column: Futuristic Form -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div
+                            class="bg-white dark:bg-slate-900/40 backdrop-blur-xl p-8 rounded-xl border border-slate-200 dark:border-primary/20 shadow-2xl relative overflow-hidden group">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16">
+                            </div>
+                            <form class="space-y-6 relative z-10">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Full
+                                        Name</label>
+                                    <div class="neon-border transition-all duration-300">
+                                        <input
+                                            class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg py-3 px-4 text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600"
+                                            placeholder="Commander Shepard" type="text" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Transmission
+                                        ID (Email)</label>
+                                    <div class="neon-border transition-all duration-300">
+                                        <input
+                                            class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg py-3 px-4 text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600"
+                                            placeholder="n7@alliance.mil" type="email" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Vehicle
+                                        of Interest</label>
+                                    <div class="neon-border transition-all duration-300">
+                                        <select
+                                            class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg py-3 px-4 text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:outline-none appearance-none">
+                                            <option>AeroStream S-Class</option>
+                                            <option>VoltX Hyper-Coupe</option>
+                                            <option>Zenith Autonomous SUV</option>
+                                            <option>Other / Inquiry</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Message
+                                        Payload</label>
+                                    <div class="neon-border transition-all duration-300">
+                                        <textarea
+                                            class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg py-3 px-4 text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:outline-none placeholder:text-slate-400 dark:placeholder:text-slate-600"
+                                            placeholder="Type your message here..." rows="4"></textarea>
+                                    </div>
+                                </div>
+                                <button
+                                    class="w-full bg-primary text-white font-bold py-4 rounded-lg neon-glow hover:translate-y-[-2px] active:translate-y-[0px] transition-all flex items-center justify-center gap-2"
+                                    type="submit">
+                                    <span>Send Transmission</span>
+                                    <span class="material-symbols-outlined text-sm text-secondary">send</span>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- Contact Info Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div
+                                class="p-4 bg-slate-100 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-lg flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary">phone_iphone</span>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase">Support Line</p>
+                                    <p class="text-sm font-mono">+1 (888) FUTURE-0</p>
+                                </div>
+                            </div>
+                            <div
+                                class="p-4 bg-slate-100 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-lg flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary">alternate_email</span>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase">General Inquiries</p>
+                                    <p class="text-sm font-mono">hello@Driveway Dreams.io</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Holographic Map -->
+                    <div class="lg:col-span-7 flex flex-col gap-8">
+                        <div
+                            class="relative h-[400px] lg:h-full min-h-[500px] w-full bg-slate-200 dark:bg-slate-950 rounded-xl border border-slate-300 dark:border-primary/30 overflow-hidden shadow-2xl group">
+                            <!-- Hologram Effects -->
+                            <div class="absolute inset-0 hologram-grid opacity-40"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+                            <!-- Simulated Map Content -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-full h-full opacity-60 dark:opacity-40 grayscale contrast-125"
+                                    data-alt="Futuristic city map with glowing blue paths" data-location="San Francisco"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDN4pNBAjuSVoCbshyt1hEoYvRMY8wuNoG5NJWtyeAQsstJPGHuc189QT7s9rO9d2fXK3Kx1hgKkusir6BI5XJU55_X63jE9NBYMssaLG5FuR3BnGQPUqLIW4eI-gEfJieUboyNlus2bsQIdD9nkEW51VAPjuYfoNVtIlr-vB2fkfaZrzJVadFiazf5CT6IG0C_T1SErhn2q6YMMAqRoVZBY3aveHRy6q2zS4oCpx1QMoAMaQla0QbIbEQWJumf4AeyusiZtzFkkp70"); background-size: cover;'>
+                                </div>
+                            </div>
+                            <!-- Animated Scanning Element -->
+                            <div class="scanline animate-pulse"></div>
+                            <!-- Map Overlays (HUD elements) -->
+                            <div class="absolute top-6 left-6 flex flex-col gap-2">
+                                <div
+                                    class="bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded text-[10px] text-primary font-mono border border-primary/40 uppercase tracking-widest">
+                                    System Status: Online
+                                </div>
+                                <div
+                                    class="bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded text-[10px] text-slate-300 font-mono border border-slate-700 uppercase tracking-widest">
+                                    Lat: 37.7749 N
+                                </div>
+                                <div
+                                    class="bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded text-[10px] text-slate-300 font-mono border border-slate-700 uppercase tracking-widest">
+                                    Long: 122.4194 W
+                                </div>
+                            </div>
+                            <!-- Center Pin -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div class="relative flex items-center justify-center">
+                                    <div class="absolute w-24 h-24 bg-primary/20 rounded-full animate-ping"></div>
+                                    <div class="absolute w-12 h-12 bg-primary/40 rounded-full animate-pulse"></div>
+                                    <div class="z-10 text-white p-2 rounded-full shadow-lg neon-glow">
+                                        <span class="material-symbols-outlined block text-secondary">location_on</span>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-full mb-4 bg-slate-900 border text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap backdrop-blur-md">
+                                        <p class="font-bold">Driveway Dreams Hub Alpha</p>
+                                        <p class="text-[10px] text-slate-400">1200 Innovation Dr, San Francisco</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Map Controls -->
+                            <div class="absolute bottom-6 right-6 flex flex-col gap-2">
+                                <button
+                                    class="size-10 bg-slate-900/90 border border-slate-700 text-white rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+                                    <span class="material-symbols-outlined text-secondary">add</span>
+                                </button>
+                                <button
+                                    class="size-10 bg-slate-900/90 border border-slate-700 text-white rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+                                    <span class="material-symbols-outlined text-secondary">remove</span>
+                                </button>
+                                <button
+                                    class="size-10 bg-slate-900/90 border border-slate-700 text-white rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+                                    <span class="material-symbols-outlined text-secondary">my_location</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Social Section -->
+                        <div
+                            class="flex items-center justify-between p-6 bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-xl">
+                            <h3 class="font-bold text-sm tracking-widest uppercase text-slate-500">Connect via Sat-Link
+                            </h3>
+                            <div class="flex gap-6">
+                                <a class="social-glow transition-all text-slate-400 hover:text-secondary" href="#">
+                                    <svg class="size-6" fill="currentColor" viewbox="0 0 24 24">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="social-glow transition-all text-slate-400 hover:text-secondary" href="#">
+                                    <svg class="size-6" fill="currentColor" viewbox="0 0 24 24">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="social-glow transition-all text-slate-400 hover:text-secondary" href="#">
+                                    <svg class="size-6" fill="currentColor" viewbox="0 0 24 24">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer Small -->
+            <footer
+                class="mt-auto px-6 lg:px-20 py-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-500 font-mono">© 2024 Driveway Dreams CORP. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    <a class="hover:text-primary" href="#">Privacy Protocol</a>
+                    <a class="hover:text-primary" href="#">Service Terms</a>
+                    <a class="hover:text-primary" href="#">System Status</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

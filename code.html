@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Driveway Dreams | The Future of Motion</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "neon-green": "#39ff14",
+                        "neon-purple": "#bc13fe",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#161b22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-green {
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+            border-color: rgba(57, 255, 20, 0.5);
+        }
+
+        .glow-purple {
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.2);
+            border-color: rgba(188, 19, 254, 0.5);
+        }
+
+        .glow-primary {
+            box-shadow: 0 0 15px rgba(37, 106, 244, 0.3);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 glass px-6 py-4 md:px-20">
+            <div class="flex items-center gap-8">
+                <a href="index.html" class="flex items-center gap-3 text-primary">
+                    <span class="material-symbols-outlined text-3xl">electric_car</span>
+                    <h2 class="text-xl font-bold tracking-tight uppercase">Driveway Dreams</h2>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Quantum-Drive</a>
+                    <a class="text-sm font-medium hover:text-neon-purple transition-colors" href="#">Holographic
+                        Dash</a>
+                    <a class="text-sm font-medium hover:text-neon-green transition-colors" href="#">AI Drift</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Performance</a>
+                    <a class="text-sm font-bold text-primary transition-colors uppercase tracking-widest"
+                        href="videoplayer.html">Watch Now</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center glass rounded-lg px-3 py-1.5 border-white/5">
+                    <span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-500 w-40"
+                        placeholder="Search technology..." type="text" />
+                </div>
+                <button
+                    class="bg-primary hover:bg-primary/80 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all glow-primary">
+                    Book a Test Drive
+                </button>
+            </div>
+        </header>
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative h-[85vh] flex items-center justify-center overflow-hidden px-6">
+                <div class="absolute inset-0 z-0">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/60 to-background-dark">
+                    </div>
+                    <img class="w-full h-full object-cover"
+                        data-alt="Futuristic glowing sports car engine in a dark lab"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_9vhP7DkVG3HhblnEP9oYuoU4Ffjpc7IgQ2GnJYhT5wKILIG-hqDhmjbblQqHVK6d0hvXWFYvCTbQkSeCk9Hl8DlcXSRKwDhadw5UXX6f0Ud1e7o24-ZNO4eCI7dQJEGYbXsfNk0YwuOLXdgVxEoe8NdBSEcQkucOaBBbvx1plyzu3LPg4CgcsP8_9OgG3bgaPUtCSog2zzp6bCdKR7E7tN1CQM8JiCEIi5Yr8PCczBqSrg3Md9b-5t1a9DgfkPiESgL1qnMGle9E" />
+                </div>
+                <div class="relative z-10 max-w-4xl text-center space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neon-green/30 bg-neon-green/10 text-neon-green text-xs font-bold tracking-widest uppercase mb-4">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-green opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-neon-green"></span>
+                        </span>
+                        Systems Online: v4.2.0
+                    </div>
+                    <h1 class="text-5xl md:text-8xl font-black tracking-tighter text-white">
+                        THE FUTURE <br /> <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-neon-purple to-neon-green">OF
+                            MOTION</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light">
+                        Experience the evolution of driving with Driveway Dreams' Quantum-Drive and neural-enhanced
+                        stability systems.
+                        Engineering the impossible, daily.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                        <button
+                            class="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl hover:scale-105 transition-transform">
+                            Configure Your Tech
+                        </button>
+                        <button
+                            class="w-full sm:w-auto px-8 py-4 glass text-white font-bold rounded-xl hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            Watch Blueprint
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Core Technologies Grid -->
+            <section class="max-w-7xl mx-auto px-6 py-24">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-2">Engineering Excellence
+                        </h2>
+                        <h3 class="text-4xl font-bold text-white">Core Technologies</h3>
+                    </div>
+                    <p class="text-slate-400 max-w-md">Our proprietary systems are designed to push the boundaries of
+                        physics and digital interaction.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Tech 1 -->
+                    <div
+                        class="group relative p-6 rounded-xl glass border-primary/20 hover:border-primary/50 transition-all">
+                        <div class="mb-6 overflow-hidden rounded-lg aspect-square">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Close up of a high tech magnetic car transmission"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAep1pJDDJWGmDHkFs1NWIUQq9VZkjfDFdQtcA_t_GpeYp3X9cuRKcnmfVSZ6rTiKzFH9Gxrty4-hv1WWtNhSa0LuSRpwvJbZPqJE74AQBVXqKb5gz4zMwn90RVst2FjGnTwcBIx1aOIHlkOb7sYtxdb5z2Wz92f361UwOBIjulPx9rYs3uIszqIXdtTnmrfH7KMk4Y4WUKNWWYr4ljOpn6S1XYWmLBS8L-k_YiKwSQnfc_vavK8K_4YYdP-K7ECeEorh-i5mioo_ZO" />
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Quantum-Drive</h4>
+                        <p class="text-slate-400 text-sm mb-4">Magnetic gear shifting providing instantaneous torque and
+                            99.9% energy efficiency.</p>
+                        <div class="flex items-center gap-2 text-primary font-mono text-xs">
+                            <span class="material-symbols-outlined text-sm">bolt</span>
+                            0.01s Response Time
+                        </div>
+                    </div>
+                    <!-- Tech 2 -->
+                    <div class="group relative p-6 rounded-xl glass glow-purple transition-all">
+                        <div class="mb-6 overflow-hidden rounded-lg aspect-square">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Futuristic holographic dashboard projected over a car steering wheel"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtt35lUlWii5KMBq0jLn2BrpOS84z15U271Dpdrt2eb_95ToJG3ikgfZEOkfQ4JVglDBcTWM-IbasqP36iElficgvJ944_fj7QjwXMr8g8owV355u3SrAjp8MX49TZ-e59DiF53cfmGfnBXAPQ55xuLGqRZ_tK4iTk_wMfl6LVx1Da8yiiKtQjzDs5PZkHYMMZ9aI3xDtnRgd-_5IcCgHuexfh1ZmAtIqiAavNCrv1okpUXEwKw1XaChLO6hYudnN7_RvHNvYcyJvj" />
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Holographic Dash</h4>
+                        <p class="text-slate-400 text-sm mb-4">Mid-air AR projections and gesture-based controls for an
+                            unobstructed field of vision.</p>
+                        <div class="flex items-center gap-2 text-neon-purple font-mono text-xs">
+                            <span class="material-symbols-outlined text-sm">visibility</span>
+                            Status: Active
+                        </div>
+                    </div>
+                    <!-- Tech 3 -->
+                    <div class="group relative p-6 rounded-xl glass glow-green transition-all">
+                        <div class="mb-6 overflow-hidden rounded-lg aspect-square">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Motion blur of a car drifting on a neon lit track"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFGhxF9eqmOMj7hHIwDwLai6UJW6MgGx6BFZ8dqF0UuPjF8eeJMMdHziaxO_nTU8O6hm0YrgWjPRRpMc0hS0H1yQ3nSytbJt-Oh2D5up6kTL5c0kLX_AKyQkW-eHK4vXh4T1vGlpIqrLPMnMyiBjcXKWKIv0xF3QFE-kEhVKAGgl8U0mklXzj_Fu-bd9cKF36BR5prI8PGMsNHqMJMKLaWlAkty6wwe9jzgvWE-5_IqCOx7USpvB8gLhFlKRzGvgh-XwK_baQ5FM7m" />
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">AI Drift Control</h4>
+                        <p class="text-slate-400 text-sm mb-4">Neural networks managing vehicle stability at high
+                            speeds, even in extreme conditions.</p>
+                        <div class="flex items-center gap-2 text-neon-green font-mono text-xs">
+                            <span class="material-symbols-outlined text-sm">psychology</span>
+                            AI-Managed Safety
+                        </div>
+                    </div>
+                    <!-- Tech 4 -->
+                    <div
+                        class="group relative p-6 rounded-xl glass border-white/10 hover:border-white/20 transition-all">
+                        <div class="mb-6 overflow-hidden rounded-lg aspect-square">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Digital representation of 6G data transmission waves"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqUuIIeOvDB5KWtwhPiZ9ge6A88U2e3ikg1jNKyaWI-LLpn-MdcaztrWcL8BIqM2RT-6AVF_RrKaqiVRTeLe-n7-ACigzmgetJVLTbbg8A6AUjjNo9fcfh7M1MZYq-V4lS0JOh4BwPO_Lbzr20pT9Nu8SIKacpB2ZBe2rVqUIPIX_Yk0M7wnD6mhKZPpfEVhQtQQGmQckbrfRQ9XYTl7fpmmFC4xRl8crBMXeHjy5GbKDfxbCs55IqUbpt8phlcn7NSys3Tz3NAFUA" />
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Zero-Latency</h4>
+                        <p class="text-slate-400 text-sm mb-4">Advanced drive-by-wire system integrated with hyper-fast
+                            6G connectivity.</p>
+                        <div class="flex items-center gap-2 text-slate-300 font-mono text-xs">
+                            <span class="material-symbols-outlined text-sm">wifi_tethering</span>
+                            Latency: 0.1ms
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Blueprint Section -->
+            <section class="bg-surface-dark/30 py-24 border-y border-white/5">
+                <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-neon-purple font-bold tracking-widest uppercase text-sm mb-2">The
+                                Architecture</h2>
+                            <h3 class="text-4xl font-bold text-white mb-6">Interactive Engine Blueprint</h3>
+                            <p class="text-slate-400 leading-relaxed">
+                                Our propulsion system is a marvel of solid-state engineering. By removing the mechanical
+                                linkages found in traditional EVs, we've reduced weight by 40% while increasing power
+                                density to levels previously seen only in aerospace.
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4 p-4 rounded-lg glass border-l-4 border-l-primary">
+                                <span class="material-symbols-outlined text-primary mt-1">sensors</span>
+                                <div>
+                                    <h5 class="text-white font-bold">1,200 Sensors/sec</h5>
+                                    <p class="text-xs text-slate-400">Continuous monitoring of battery thermals and
+                                        magnetic flux.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 rounded-lg glass border-l-4 border-l-neon-purple">
+                                <span class="material-symbols-outlined text-neon-purple mt-1">memory</span>
+                                <div>
+                                    <h5 class="text-white font-bold">Synapse Processing Unit</h5>
+                                    <p class="text-xs text-slate-400">Localized AI chips at each wheel for micro-second
+                                        adjustments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-tr from-primary/20 via-neon-purple/20 to-transparent blur-3xl opacity-50">
+                        </div>
+                        <div
+                            class="relative glass rounded-2xl p-8 border-white/10 aspect-video flex items-center justify-center">
+                            <!-- Placeholder for complex blueprint illustration -->
+                            <div
+                                class="w-full h-full border border-dashed border-white/20 rounded-xl relative overflow-hidden">
+                                <img class="w-full h-full object-cover opacity-40 mix-blend-screen"
+                                    data-alt="Technical line drawing of a car engine over digital grid"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm-S8uC2hh2m6phXoqXq5Dlu64usN4FTtQA5eiMQQ7_M9PVe-yneEguXxruZZ5QklhIcgDSzGpXSHWnto0qY4YQZWn6XOH-8rpNr2ArDNlhRNDv-oAToUTrnFlFvo6d7fOyZyUPvYpJd6LWcfXgMoRRjAqdbi7Tjl5eib95vvOCJr5UyMt5z1SX0oH89kFNcSxk8nCCdE6cIVnpNGTkIIU_8OfdlTIbbJNeuMCjP75oiIQlG3DtP3NmCyW-jC0ghVQ4RnLBnsDrNXh" />
+                                <div
+                                    class="absolute top-1/4 left-1/3 size-4 bg-primary rounded-full animate-pulse flex items-center justify-center">
+                                    <span
+                                        class="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping"></span>
+                                </div>
+                                <div
+                                    class="absolute bottom-1/3 right-1/4 size-4 bg-neon-green rounded-full animate-pulse flex items-center justify-center">
+                                    <span
+                                        class="absolute inline-flex h-full w-full rounded-full bg-neon-green opacity-75 animate-ping"></span>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 glass p-4 rounded-lg border-white/10 shadow-2xl">
+                                <div class="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Live Telemetry
+                                </div>
+                                <div class="text-neon-green font-mono font-bold">FLUX: 98.4%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Cockpit Showcase -->
+            <section class="py-24 overflow-hidden">
+                <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
+                    <h2 class="text-4xl font-bold text-white mb-4">Command Center</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Step into the cockpit where data meets intuition. A
+                        clean, distraction-free environment that reacts to your presence.</p>
+                </div>
+                <div class="flex gap-6 px-6 overflow-x-auto pb-8 snap-x no-scrollbar">
+                    <div class="min-w-[300px] md:min-w-[600px] snap-center">
+                        <div class="aspect-video rounded-2xl overflow-hidden glass border-white/10 relative group">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Driver POV of a futuristic car steering wheel with digital screens"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtxOCOiXBDcTI0yCQAwC1iqR5LoxQnhgoLQTk_ds_5T8s3CMRl4moUFHrug46xGtbj5MtZ-FDoFmJ5If5d7q7Es9mP2jY1gK43arHlEW8Ylk2dOBTl09T0PT1Dwj-ZPCC4f_2ixVqC25K1w1VLgQCaYyVvRam2VPk5nAIRDdBSx0IPHubKWRBs-al1iBXk487QzPaZg6foD5-v5SGQ62DWoUEA3IcMrXeSEfmbRrCZdzeEYDgY-0NQEL7X7LAgbtPQ36hpouSHXDSG" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+                                <h4 class="text-white text-xl font-bold">Obsidian Interior</h4>
+                                <p class="text-slate-300 text-sm">Carbon-fiber weaves with integrated fiber optic
+                                    lighting.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-w-[300px] md:min-w-[600px] snap-center">
+                        <div class="aspect-video rounded-2xl overflow-hidden glass border-white/10 relative">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Close up of a minimalist luxury car center console"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqbATuskuKpi5w4P_f2tz38vRRUphF3t6QhAv2Qpc_94MiWReQ0x5hqcVCxZf-WlQtYjjgemMSlxAtKZKyA2mAaXO5xFihUN3EJFsEureCdFaQI08ewI4bEhCwzAWE3jzNve2B-BS27l0aiK26C8ZjcyAyKKxpvxTWE4biku6Bq8TGUKwH3W9ava2wu06hJAxH2UPZYfit7jIJds4u2Unz_p6FCcujMLEaenxs2nUVRKtytC4g97km8wBsdlIGiI5GGt4hJ4GfW9qc" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+                                <h4 class="text-white text-xl font-bold">Minimalist Interface</h4>
+                                <p class="text-slate-300 text-sm">Eliminating physical buttons for a seamless tactile
+                                    surface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-w-[300px] md:min-w-[600px] snap-center">
+                        <div class="aspect-video rounded-2xl overflow-hidden glass border-white/10 relative">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Modern sports car interior with neon purple ambient lights"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0UWla1zEQRoksBbLjr3GoylIePnUAFpDIrbzW8dzflQnUc_3-_5fB7rnCpTHnd6tCv1NzkMbHy-tzXDZHmeZmq7HVvZMwWxWmJS4EAgC8q2KyrYBGxF1WLpUEkgOEYxAdezSRWfY6hbwMvWBOpEDLkPxRw3venL37AMqg_799fCQE_Yj6kHCd8YOIKa3Et7YnURpI8ftr2UpxBa6AgMmlYHzOI6pf_J0CWrQxJMZyv5-YxR7nPkkjn8q02oRfy9EQdsaPfuWFqNoZ" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+                                <h4 class="text-white text-xl font-bold">Neon Ambiance</h4>
+                                <p class="text-slate-300 text-sm">Adaptive lighting that changes based on your driving
+                                    mode.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Tech Comparison -->
+            <section class="max-w-4xl mx-auto px-6 py-24">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-white mb-4">Performance Metrics</h3>
+                    <p class="text-slate-400">Quantifying the leap in automotive evolution.</p>
+                </div>
+                <div class="glass rounded-2xl overflow-hidden border-white/10">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-white/5 text-slate-300 font-bold uppercase tracking-wider">
+                            <tr>
+                                <th class="p-6">Feature</th>
+                                <th class="p-6">Standard EV</th>
+                                <th class="p-6 text-primary">Driveway Quantum</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-6 text-white font-medium">Torque Latency</td>
+                                <td class="p-6 text-slate-400">150ms</td>
+                                <td class="p-6 text-neon-green font-bold">1ms</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-6 text-white font-medium">Energy Recovery</td>
+                                <td class="p-6 text-slate-400">65%</td>
+                                <td class="p-6 text-neon-green font-bold">92%</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-6 text-white font-medium">Processing Speed</td>
+                                <td class="p-6 text-slate-400">2.5 TFLOPS</td>
+                                <td class="p-6 text-neon-green font-bold">48 TFLOPS</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-6 text-white font-medium">Connectivity</td>
+                                <td class="p-6 text-slate-400">5G Legacy</td>
+                                <td class="p-6 text-neon-green font-bold">6G Ultra</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- Call to Action -->
+            <section class="px-6 py-24">
+                <div class="max-w-5xl mx-auto glass rounded-3xl p-12 text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px]"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-neon-purple/20 blur-[100px]"></div>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-6">READY TO STEP INTO <br /> THE FUTURE?
+                    </h2>
+                    <p class="text-slate-400 max-w-xl mx-auto mb-10">Experience the Quantum-Drive system first-hand. Our
+                        consultants are available for global private viewings.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                        <button
+                            class="w-full md:w-auto px-10 py-4 bg-white text-black font-bold rounded-xl hover:bg-slate-200 transition-colors">
+                            Locate an Experience Center
+                        </button>
+                        <button
+                            class="w-full md:w-auto px-10 py-4 border border-white/20 text-white font-bold rounded-xl hover:bg-white/10 transition-colors">
+                            Contact Technical Support
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="border-t border-white/5 py-12 px-6 bg-background-dark">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-primary">
+                        <span class="material-symbols-outlined">electric_car</span>
+                        <h2 class="text-xl font-bold tracking-tight uppercase">Driveway Dreams</h2>
+                    </div>
+                    <p class="text-slate-500 text-sm max-w-xs">Pioneering the next century of transport through quantum
+                        engineering and artificial intelligence.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+                    <div>
+                        <h5 class="text-white font-bold text-sm mb-4">Tech</h5>
+                        <ul class="space-y-2 text-slate-500 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Quantum-Drive</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">AI Core</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">6G Mesh</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-white font-bold text-sm mb-4">Company</h5>
+                        <ul class="space-y-2 text-slate-500 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Safety</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <h5 class="text-white font-bold text-sm mb-4">Stay Connected</h5>
+                        <div class="flex gap-4">
+                            <a class="size-10 rounded-lg glass flex items-center justify-center hover:text-primary transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">share</span>
+                            </a>
+                            <a class="size-10 rounded-lg glass flex items-center justify-center hover:text-primary transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">alternate_email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-600 text-xs">© 2024 Driveway Dreams Global. All rights reserved.</p>
+                <div class="flex gap-6 text-slate-600 text-xs">
+                    <a class="hover:text-white" href="#">Privacy Policy</a>
+                    <a class="hover:text-white" href="#">Terms of Tech</a>
+                    <a class="hover:text-white" href="#">Cookie Settings</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

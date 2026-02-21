@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Driveway Dreams | Pro Player</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06f906",
+                        "background-dark": "#050505",
+                        "surface-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(6, 249, 6, 0.4);
+        }
+
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(12px);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #06f906;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100 custom-scrollbar antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 px-6 lg:px-12 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="size-8 bg-primary rounded flex items-center justify-center text-black neon-glow">
+                    <span class="material-symbols-outlined text-xl">speed</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tighter uppercase italic">Driveway <span
+                        class="text-primary">Dreams</span></h1>
+            </a>
+            <div class="flex-1 max-w-xl px-10 hidden lg:block">
+                <div class="relative group">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+                    <input
+                        class="w-full bg-white/5 border border-white/10 rounded-lg py-2 pl-10 pr-4 focus:border-primary focus:ring-0 text-sm italic"
+                        placeholder="Search archive..." type="text" />
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="videoplayer.html"
+                    class="material-symbols-outlined hover:text-primary transition-colors">grid_view</a>
+                <div class="size-8 rounded-full border border-primary/20 bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXmb2tWv9wkSR6LvViTQxZK8cMZc30LuguRRZ9rvhvHQIrtv7XWzfLCkUsbCzB7D8YiP2CdSEV0rASnbuyP2Gu2Ur1fa8_aCaLGAyyLE0Btzv1g1_yMTV6FidBmaOmqyz5up6mB_HC58IBtkIGmgtqzWEbJveiT1QBVlRGZq21rN8vsbN9e0UgEtQa78UtsU611qGMZizJ_EKeU2AzhyXtf8yXiFlgpL7teeBTB7Ox4vq1nVuMrAWWCFBdEbiSmCCHSRtBionAKpFD')">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-[1600px] mx-auto px-6 pt-24 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Video Stage -->
+            <div class="lg:col-span-8">
+                <div
+                    class="relative aspect-video rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl group">
+                    <img id="main-video-img" class="w-full h-full object-cover opacity-80"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxEz1nyLmCL-5q0yDZ4pTKdYdzwcAfj1dO5BUNhWbivo-t4c0r2GJYG-hiU1Bb5Ng6se-6cLEbBLqSxEKDqc52YDSpuIyOTdJiNMfBmixfDvJpb5JakhJvPZydGTAwGMEBwfoP10hIlqP5CSqpFkBojbum1et5APSWfP7ycV14WlWA10-x7pqz8g6ZkVdWpa23WEegsyhd1FwybCMNM8xvsxiOCbV52jcMPMBqwkxQvNuNlBd2amgNOuLP2s4XInl34ObqHcEJyvcS" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button
+                            class="size-20 bg-primary rounded-full flex items-center justify-center text-black neon-glow transition-transform hover:scale-110">
+                            <span class="material-symbols-outlined text-5xl fill-1">play_arrow</span>
+                        </button>
+                    </div>
+                    <!-- Player Bar -->
+                    <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <div class="w-full h-1.5 bg-white/20 rounded-full mb-4 relative cursor-pointer group/progress">
+                            <div class="absolute top-0 left-0 h-full bg-primary w-1/3 rounded-full"></div>
+                            <div
+                                class="absolute top-1/2 left-1/3 -translate-y-1/2 -translate-x-1/2 size-4 bg-primary rounded-full neon-glow scale-0 group-hover/progress:scale-100 transition-transform">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-white/70">
+                            <div class="flex items-center gap-6">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary">play_arrow</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary">skip_next</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary">volume_up</span>
+                                <span class="text-xs font-bold font-mono">12:45 / 24:12</span>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary">settings</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary">fullscreen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="mt-8">
+                    <h2 id="video-title" class="text-3xl font-black uppercase italic tracking-tight">The Dawn of
+                        Electric Power</h2>
+                    <div class="flex items-center justify-between mt-4 pb-6 border-b border-white/5">
+                        <div class="flex items-center gap-4">
+                            <div class="size-12 rounded-full border border-primary/30 p-0.5">
+                                <div class="size-full bg-cover bg-center rounded-full"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXQkQFLgkSdN5f5gcEMRNHW9Gmr_JHESCKtGJGJ-bPeJ7jH6q14WyyEXqYhzqYD0i1G-VNFyyRsHrQNi6Bv9TrkLsmNtmtxOmI-gFS6TvhnFlS1Sz0GwGWT9d0JwH0N27MNJ3PT0z72C2ObPC3gkFC3U7azqG1fBALq17wekOfUtsAQCRd7a9c7g_YlYz8mWemHRcWBlnwqjyDtiOTDrdZmxlDeyAErJqaEaeVGoYTzyhVAz-XbJRjGNHACtFtjx1TM6Xl66OUnuXH')">
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold flex items-center gap-1">Performance Lab <span
+                                        class="material-symbols-outlined text-primary text-xs fill-1">verified</span>
+                                </h4>
+                                <p class="text-xs text-slate-500 font-bold uppercase tracking-tight">2.4M Subs</p>
+                            </div>
+                            <button
+                                class="ml-4 bg-primary text-black px-6 py-2 rounded-lg text-sm font-black uppercase tracking-wider neon-glow">Subscribe</button>
+                        </div>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all font-bold text-sm"><span
+                                    class="material-symbols-outlined text-sm">thumb_up</span> 42K</button>
+                            <button
+                                class="flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all font-bold text-sm"><span
+                                    class="material-symbols-outlined text-sm">share</span> Share</button>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-6 p-6 bg-white/5 rounded-2xl text-slate-400 text-sm leading-relaxed border border-white/5">
+                        <p class="font-bold text-slate-200 mb-2">1,254,302 views • 2 days ago</p>
+                        Exploring the boundaries of automotive engineering with the latest Driveway Dreams specimens...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="lg:col-span-4">
+                <h3 class="text-sm font-black uppercase tracking-[0.3em] text-slate-500 mb-6">Up Next</h3>
+                <div class="flex flex-col gap-4">
+                    <!-- Rec 1 -->
+                    <div class="flex gap-4 group cursor-pointer"
+                        onclick="changeVideo('Nürburgring Lap Record', 'https://lh3.googleusercontent.com/aida-public/AB6AXuCanBajgQhfeb3yKXxGJs9SBTFHWVNLJFRHcNg_yYVQuHUUZZ-a4HbLPOuYqOpcGwG_AeThAg_VH-q1tbGGn4lg8wRTtJgivO8G9Db-Jb7uU0FJNLMsQMJp_rN2Xx61MQOqt1VAh0TAhI_brlF_gJkQ662k-X0JfvicYdPc1RMMOIJIEWNxPa_OB3n8qjOdEmumoXOqAEUgLz4eF_QAlK_f4GeAueQ59u4zuSiqdDe-1Xzf63orHOo5tObVkI6tTyy7BuWq9UUg-Vyq')">
+                        <div class="relative w-40 aspect-video rounded-xl overflow-hidden shrink-0">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbQlnm4juhDMITKE2g1nbG64wptaJulhLBrVPlc9ZcLM3UYK_TB5eBRmHa0ROkSkBgFHK-fhmW8DLOAEmjvp6mneBc0JnfJTG1i7O1jLphjFgaDnyoF4GHdJVFFlxU7qH8Gdf9ambw8jIhtekzuoF861mqTPRsV1Xu3rPctEPE7Iy2N-fSiak8G2vOrqoiCOpV2iVfIHzttdAR9S6UnkuFcfjXu1emVQmOnIHGIdxrc_NoVAkyYI0T4JXeN2RvkIf4bRz4m9GQaVRR" />
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h4
+                                class="text-sm font-bold group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                                Hypercar Track Test: The Ultimate Battle</h4>
+                            <p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Performance Lab
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Rec 2 -->
+                    <div class="flex gap-4 group cursor-pointer"
+                        onclick="changeVideo('Classic Restoration Full Walkthrough', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBpBUkE1j_XJ-igmupxdLVJpaP6W9GB7pwVSwgjUqXUN-weOedJjGReCvK8HHJQn-BDSo3t9hTq9pezhYy1cWdp7gboKjZ2HedMZvCJzLeEcU9GmXnPgMssMjNW23-QvjyT2GOtKHvHgLJGVk6ImWV9bcSUhwVk2TUMjnDsqigBCY1SoRO_MXagurZuNOrJqrgTlfQSeR4W5FekF-3IJkuVAHx78t2n__4QSLZASUj1rCxkD2Cjy9rDLOgx5TJGKiD8S4DferIaiWv3')">
+                        <div class="relative w-40 aspect-video rounded-xl overflow-hidden shrink-0">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpBUkE1j_XJ-igmupxdLVJpaP6W9GB7pwVSwgjUqXUN-weOedJjGReCvK8HHJQn-BDSo3t9hTq9pezhYy1cWdp7gboKjZ2HedMZvCJzLeEcU9GmXnPgMssMjNW23-QvjyT2GOtKHvHgLJGVk6ImWV9bcSUhwVk2TUMjnDsqigBCY1SoRO_MXagurZuNOrJqrgTlfQSeR4W5FekF-3IJkuVAHx78t2n__4QSLZASUj1rCxkD2Cjy9rDLOgx5TJGKiD8S4DferIaiWv3" />
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h4
+                                class="text-sm font-bold group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                                Classic Restoration: Forgotten GT Full Teardown</h4>
+                            <p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Historical Dept
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Rec 3 -->
+                    <div class="flex gap-4 group cursor-pointer"
+                        onclick="changeVideo('Drift Championship LIVE Highlights', 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZ9VgRpamqvg8d0wi2S4nXBdMD4uIWc0QHJ437AdjY77B7TStLgqim72t1c-AqvXddHmoWTehA4tOSMIYpNOkRiwlhf_uzzQIDqqJJ1FCmjoI6pPjIlLNSd0Vw78avbwnKYctaPVRyw4MGQOh0Izi_UM8fP69SwReLScwbjFz_T1v9Li3e3Mpyf--tNdfzrsQeM8SqyYFL0Ccq_ZBw20ZMRJYSsvy81f8a9kfSKva1cG6nW7lCYEsejwj7qzHQYvQJZ_9F7BLE-NqO')">
+                        <div class="relative w-40 aspect-video rounded-xl overflow-hidden shrink-0">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ9VgRpamqvg8d0wi2S4nXBdMD4uIWc0QHJ437AdjY77B7TStLgqim72t1c-AqvXddHmoWTehA4tOSMIYpNOkRiwlhf_uzzQIDqqJJ1FCmjoI6pPjIlLNSd0Vw78avbwnKYctaPVRyw4MGQOh0Izi_UM8fP69SwReLScwbjFz_T1v9Li3e3Mpyf--tNdfzrsQeM8SqyYFL0Ccq_ZBw20ZMRJYSsvy81f8a9kfSKva1cG6nW7lCYEsejwj7qzHQYvQJZ_9F7BLE-NqO" />
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h4
+                                class="text-sm font-bold group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                                Drift Championship: Finals LIVE</h4>
+                            <p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Track Kings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function changeVideo(title, imgSrc) {
+            document.getElementById('video-title').textContent = title;
+            document.getElementById('main-video-img').src = imgSrc;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>

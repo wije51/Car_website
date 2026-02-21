@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEON MOTORS | Drive the Future</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06f906",
+                        "secondary": "#a855f7",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#050505",
+                        "surface-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(6, 249, 6, 0.4);
+        }
+        .neon-border {
+            border: 1px solid rgba(6, 249, 6, 0.3);
+        }
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.2) 0%, rgba(5, 5, 5, 0.9) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased selection:bg-primary selection:text-white">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 px-6 lg:px-12 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white neon-glow">
+<span class="material-symbols-outlined text-xl">electric_car</span>
+</div>
+<h2 class="text-xl font-bold tracking-tighter uppercase italic">Neon Motors</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Inventory</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Technology</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">The Garage</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-white/5 border border-white/10 rounded-lg px-3 py-1.5 focus-within:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-slate-400 text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-500 w-48" placeholder="Search Models..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all neon-glow uppercase tracking-wider">
+                    Explore
+                </button>
+<div class="size-10 rounded-full border-2 border-primary/30 p-0.5 overflow-hidden">
+<img class="w-full h-full object-cover rounded-full" data-alt="User profile avatar close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClehyGnxS3cu6WFes9Y_eEax9FubksFLTEKSQue1ZsevkItgae4UaG0KdB1sVSFdTJIExLrxAmsO1OW-YQrOQdJseFgEycm8JAdyu4i-QKGZ6vXwS-7ReIhPX8Jc1JX8fFM1zyD5teHsrgprJ1-duDQLi30WcjuSTPpoz08VeISoEbuJgMhYHLtSreGuAMXUJj1KfZeV011PUTl2DSOAFG60LVaUDrvzPyfJBappeUbPbDUnu4Q3JV9XBCaa1_DkqySZeiU7TPdPkZ"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover" data-alt="Futuristic supercar on a wet neon street at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRZz2Bk2Hu08VkgWAUTQnT0h5VpbWW6veQ2OtJrm6rY9dhSrPcTUEd16MHmwGHEmpdV1COHPg22WgFAbMC7d2GoMSoiuEMvdsLacHTzAqDorxrUsmL1mRgqJPtHunWYQAoWrpIr2zrOJmykahTqvPN2opFon1ikoTHamCcHCE7B9poH_uGF515geVDWI9kY6WgvGf7VXuPKKN7Lm5kCFhCv2kyY7KwPkj_RwBa66kTkYgbU3KE1hIrygZF7l8SM5fHYaqczzF3_xex"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-[0.2em] mb-8">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                The Future of Mobility is Here
+            </div>
+<h1 class="text-5xl md:text-8xl font-black italic tracking-tighter mb-6 leading-tight">
+                DRIVE THE <span class="text-primary italic">FUTURE</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Experience the next generation of performance and intelligence with the world's most advanced electric supercars.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto bg-primary text-white px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform neon-glow uppercase tracking-widest">
+                    Explore Inventory
+                </button>
+<button class="w-full sm:w-auto glass-panel border border-white/20 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all uppercase tracking-widest">
+                    Book Test Flight
+                </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-400">
+<p class="text-[10px] uppercase tracking-[0.4em]">Scroll Down</p>
+<span class="material-symbols-outlined animate-bounce">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Featured Supercars -->
+<section class="py-24 px-6 lg:px-12 bg-background-dark">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4">Current Fleet</h2>
+<h3 class="text-4xl md:text-5xl font-bold tracking-tight">FEATURED SUPERCARS</h3>
+</div>
+<div class="flex gap-4">
+<button class="size-12 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="size-12 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Car Card 1 -->
+<div class="group bg-surface-dark rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Matte black Aether X supercar profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPhk-1nER6PmzeBALLdTTEma7LjE4mKfVHLEa5ag08ynm3-Bc2FPhW4SBCGk5tko24zbjvyqj3EHBLD17Aa7WX7kkq8zP3uII58F5HMQrHOV9C3ZEM4zPfQqZ5IzMxF9p0mGQ6DJU1zQlVJtYJzE90xs_7TQZVJGrFJB4lhk3rLQ9omc1RpUsljPBZoz8IwfSoylmuXk_Bh53pXtElSdaCQ28re2YhuFdBaTfzByIzGtO4CTy1cB9aDUHSa877y2zkkI4wS5AqbyTs"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Available Now</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-bold mb-1">Aether X</h4>
+<p class="text-slate-400 text-sm">Hyper-Electric GT</p>
+</div>
+<div class="text-right">
+<p class="text-xs uppercase text-slate-500 tracking-widest">Starting at</p>
+<p class="text-primary font-bold text-xl">$2.4M</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 py-6 border-y border-white/5 mb-8">
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">0-60 MPH</p>
+<p class="font-bold text-lg">1.9s</p>
+</div>
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">Top Speed</p>
+<p class="font-bold text-lg">250mph</p>
+</div>
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">Range</p>
+<p class="font-bold text-lg">520mi</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-primary/30 group-hover:bg-primary group-hover:text-white transition-all text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+                            View Configuration <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Car Card 2 -->
+<div class="group bg-surface-dark rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Blue Volt S-1 electric car with glowing headlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNfi5yHopA8Y7Avz2KF6odGpTYXEC_TkK5zpKefcgtDW_6cF69PSsTszqCmfZcOB5TxDXM06NhROkyIkrbg4o5sHdENvcOx2yxSdBZd0MMtY66XMTYzhWXXnVPxCaFTotYTQCm9_hWWLjg4ZTuORRzzeTUilW9-tM-3Sq5FBIJOT84QXegmNKZ2IlmhmVARhet8cnVrhIUNGHrxoIdGYcMbualF40x5BIFPCt46F7h6RfcbRFly0SyTnXluPSorg-3SrZanPHmHea8"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-bold mb-1">Volt S-1</h4>
+<p class="text-slate-400 text-sm">Precision Roadster</p>
+</div>
+<div class="text-right">
+<p class="text-xs uppercase text-slate-500 tracking-widest">Starting at</p>
+<p class="text-primary font-bold text-xl">$1.8M</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 py-6 border-y border-white/5 mb-8">
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">0-60 MPH</p>
+<p class="font-bold text-lg">2.2s</p>
+</div>
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">Top Speed</p>
+<p class="font-bold text-lg">230mph</p>
+</div>
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">Range</p>
+<p class="font-bold text-lg">480mi</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-primary/30 group-hover:bg-primary group-hover:text-white transition-all text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+                            View Configuration <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Car Card 3 -->
+<div class="group bg-surface-dark rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Sleek white Nova Hyper concept car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZsoDH_WKAUw0C1B8PEQU0DxjE_7BeFx_WH31FB6jeAnfw5CZvF3ZV6gqNzX-JJXhzBvSnYGJp6qoHwEogZNSQOcGO9MjL8WhsW3HTIsGYG2ZP70URnexA0KNW4mkbmnUBB-wFxFIGvyRy5QxJzR2gSCZs5n-PPeLmUw4MtKilhLSTTgvA6t-dfD_b3dQ3dmGJclbTcgviW0E45PJzmvffpBhx66DgYo_GIbuHStoI7fztDTiu4vj2EgTEBZ40sJNflZqHfjUH9BGR"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-bold mb-1">Nova Hyper</h4>
+<p class="text-slate-400 text-sm">Ultra-Track Beast</p>
+</div>
+<div class="text-right">
+<p class="text-xs uppercase text-slate-500 tracking-widest">Starting at</p>
+<p class="text-primary font-bold text-xl">$3.1M</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 py-6 border-y border-white/5 mb-8">
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">0-60 MPH</p>
+<p class="font-bold text-lg">1.8s</p>
+</div>
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">Top Speed</p>
+<p class="font-bold text-lg">280mph</p>
+</div>
+<div class="text-center">
+<p class="text-slate-500 text-[10px] uppercase mb-1">Range</p>
+<p class="font-bold text-lg">420mi</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-primary/30 group-hover:bg-primary group-hover:text-white transition-all text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+                            View Configuration <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Bento Grid -->
+<section class="py-24 px-6 lg:px-12 bg-background-dark border-t border-white/5">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4">Core Technology</h2>
+<h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">WHY CHOOSE US</h3>
+<p class="text-slate-400 max-w-2xl mx-auto font-light">Pushing the boundaries of automotive engineering with next-gen technology integrated into every fiber of our vehicles.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+<!-- Next-Gen AI -->
+<div class="md:col-span-2 md:row-span-1 glass-panel neon-border rounded-xl p-8 flex flex-col justify-between group hover:bg-primary/5 transition-all">
+<div>
+<div class="size-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center mb-6 neon-glow">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h4 class="text-2xl font-bold mb-3">Next-Gen AI Cockpits</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Integrated neural networks that learn your driving patterns for a fully personalized experience that anticipates your every need.</p>
+</div>
+</div>
+<!-- Performance -->
+<div class="md:col-span-1 md:row-span-2 glass-panel neon-border rounded-xl p-8 flex flex-col justify-center text-center group hover:bg-primary/5 transition-all">
+<div class="size-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6 neon-glow">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Zero-Latency Performance</h4>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Instant torque delivery with our proprietary solid-state battery technology, delivering power to the wheels in microseconds.</p>
+<div class="mt-auto space-y-2">
+<div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full shadow-[0_0_10px_#256af4]" style="background-color: #a855f7; box-shadow: 0 0 10px #a855f7;"></div>
+</div>
+<p class="text-[10px] uppercase font-bold tracking-widest">Maximum Efficiency</p>
+</div>
+</div>
+<!-- Autonomy -->
+<div class="md:col-span-1 md:row-span-1 glass-panel neon-border rounded-xl p-8 flex flex-col items-start group hover:bg-primary/5 transition-all">
+<div class="size-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center mb-6 neon-glow">
+<span class="material-symbols-outlined">radar</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Autonomous Precision</h4>
+<p class="text-slate-400 text-xs leading-relaxed">Level 5 autonomy powered by 360-degree LiDAR and advanced AI vision.</p>
+</div>
+<!-- Sustainable -->
+<div class="md:col-span-2 md:row-span-1 rounded-xl p-8 flex items-center justify-between text-white overflow-hidden relative group bg-[#a855f7]">
+<div class="relative z-10">
+<h4 class="text-2xl font-bold mb-3">100% Sustainable</h4>
+<p class="text-white/80 text-sm max-w-xs mb-6">Zero-emissions performance without compromise. Every component is recyclable and ethically sourced.</p>
+<button class="bg-white px-6 py-2 rounded-lg font-bold text-xs uppercase tracking-widest text-[#a855f7]">Learn More</button>
+</div>
+<span class="material-symbols-outlined text-[150px] opacity-20 absolute -right-10 -bottom-10 rotate-12 group-hover:rotate-0 transition-transform duration-700">eco</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="relative py-24 overflow-hidden">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover" data-alt="High tech car cockpit with neon light dashboards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO1KHFusL6-V1rAniZnVWfN-xgVXT32maJTYhYyEyIvWGtUABtoRmImwqAHARLfmwz77eA3u-Fn4Pna2PNsm2VjDqXRAGF8W2lCAlvZgYqPL6R2aK5o31lnAWGgtAEqvIAwXrrGerkz0khyogRxOUdMm0Dq22qfkL4IMEd9UgWpWD-rUJJovI2i2i7xsF-3cf7zRP4_WVpX-tTLhB2n8xAtfJ7EOzHnfE9FapzqxvLT8oXjZSzBvCf-rV4cGMVYxpje7vRdVZTfM_W"/>
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-sm"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+<h2 class="text-4xl md:text-6xl font-black mb-8 italic uppercase">Ready to join the revolution?</h2>
+<p class="text-lg text-slate-300 mb-10 max-w-xl mx-auto font-light">Limited production runs are available for the current model year. Secure your spot in the future of automotive history.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-primary text-white px-10 py-4 rounded-lg font-bold uppercase tracking-widest neon-glow hover:scale-105 transition-all">Configure Your Model</button>
+<button class="bg-transparent border border-white/30 hover:bg-white/10 px-10 py-4 rounded-lg font-bold uppercase tracking-widest transition-all">Contact Specialist</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark pt-20 pb-10 px-6 lg:px-12 border-t-2 border-primary/40 shadow-[0_-20px_40px_-20px_rgba(37,106,244,0.3)]" style="border-top-color: #06f906; box-shadow: 0 -20px 40px -20px rgba(6, 249, 6, 0.3);">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
+<div class="lg:col-span-2">
+<div class="flex items-center gap-3 mb-8">
+<div class="size-10 bg-primary rounded flex items-center justify-center text-white neon-glow">
+<span class="material-symbols-outlined text-2xl">electric_car</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tighter uppercase italic">Neon Motors</h2>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed max-w-xs mb-8">
+                        Leading the transition to a world of high-performance sustainable mobility through advanced robotics and neural intelligence.
+                    </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all group" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all group" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Showroom</a></li>
+<li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Pre-owned</a></li>
+<li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Fleet Sales</a></li>
+<li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Support</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Service Centers</a></li>
+<li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Owners Manual</a></li>
+<li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Legal &amp; Privacy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Newsletter</h5>
+<p class="text-slate-400 text-xs mb-4">Stay ahead of the curve. Get the latest tech updates.</p>
+<div class="flex flex-col gap-2">
+<input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm focus:ring-primary focus:border-primary" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase tracking-widest neon-glow">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-white/5 gap-6">
+<p class="text-slate-500 text-xs">© 2024 NEON MOTORS INC. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+<a class="hover:text-primary" href="#">System Status</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Use</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

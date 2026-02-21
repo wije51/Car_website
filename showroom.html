@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Driveway Dreams | Futuristic Showroom</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06f906",
+                        "secondary": "#a855f7",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#050505",
+                        "surface-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(6, 249, 6, 0.4);
+        }
+
+        .neon-border {
+            border: 1px solid rgba(6, 249, 6, 0.3);
+        }
+
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.2) 0%, rgba(5, 5, 5, 0.9) 100%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #06f906;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30 custom-scrollbar antialiased">
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 px-6 lg:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
+                    <div class="size-8 bg-primary rounded flex items-center justify-center text-white neon-glow">
+                        <span class="material-symbols-outlined text-xl">electric_car</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tighter uppercase italic">Driveway Dreams</h2>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                        href="showroom.html">Inventory</a>
+                    <a class="text-sm font-bold text-primary transition-colors border-b-2 border-primary pb-1 uppercase tracking-widest"
+                        href="showroom.html">Showroom</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                        href="code.html">Technology</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                        href="about.html">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                        href="blog.html">The Garage</a>
+                    <a class="text-sm font-bold text-primary transition-colors uppercase tracking-widest"
+                        href="videoplayer.html">Watch Now</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <div
+                    class="hidden lg:flex items-center bg-white/5 border border-white/10 rounded-lg px-3 py-1.5 focus-within:border-primary/50 transition-all">
+                    <span class="material-symbols-outlined text-slate-400 text-lg">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-500 w-48"
+                        placeholder="Search Models..." type="text" />
+                </div>
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all neon-glow uppercase tracking-wider">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-32">
+        <!-- Hero Title Section -->
+        <div class="mb-16 border-l-4 border-primary pl-6 py-2">
+            <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-4">Digital Hangar</h2>
+            <p class="text-slate-400 max-w-2xl font-light text-lg">Explore our curated selection of ultra-performance
+                specs. From hydrogen-fused hypercars to neural-linked GTs.</p>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div
+            class="bg-surface-dark border border-white/5 rounded-2xl p-6 mb-16 flex flex-wrap items-center gap-6 glass-panel">
+            <div class="flex-1 min-w-[300px] relative">
+                <span
+                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+                <input
+                    class="w-full bg-background-dark/50 border-white/10 rounded-xl pl-12 pr-4 py-4 focus:border-primary focus:ring-0 text-white placeholder:text-slate-600"
+                    placeholder="Search by model or tech specs..." type="text" />
+            </div>
+            <div class="flex gap-4 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
+                <button
+                    class="flex items-center gap-2 bg-primary/20 border border-primary/40 text-primary px-6 py-3 rounded-xl text-sm font-bold uppercase whitespace-nowrap neon-glow">
+                    <span class="material-symbols-outlined text-sm">filter_alt</span> All Models
+                </button>
+                <button
+                    class="flex items-center gap-2 bg-white/5 border border-white/10 hover:border-primary text-slate-300 px-6 py-3 rounded-xl text-sm font-bold uppercase whitespace-nowrap transition-all">
+                    Hypercars
+                </button>
+                <button
+                    class="flex items-center gap-2 bg-white/5 border border-white/10 hover:border-primary text-slate-300 px-6 py-3 rounded-xl text-sm font-bold uppercase whitespace-nowrap transition-all">
+                    Electric
+                </button>
+                <button
+                    class="flex items-center gap-2 bg-white/5 border border-white/10 hover:border-primary text-slate-300 px-6 py-3 rounded-xl text-sm font-bold uppercase whitespace-nowrap transition-all">
+                    Concept
+                </button>
+            </div>
+        </div>
+
+        <!-- Vehicle Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Car 1: Aether X -->
+            <div
+                class="bg-surface-dark border border-white/5 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+                <div class="relative aspect-[16/10] overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Futuristic sleek silver hypercar"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbQlnm4juhDMITKE2g1nbG64wptaJulhLBrVPlc9ZcLM3UYK_TB5eBRmHa0ROkSkBgFHK-fhmW8DLOAEmjvp6mneBc0JnfJTG1i7O1jLphjFgaDnyoF4GHdJVFFlxU7qH8Gdf9ambw8jIhtekzuoF861mqTPRsV1Xu3rPctEPE7Iy2N-fSiak8G2vOrqoiCOpV2iVfIHzttdAR9S6UnkuFcfjXu1emVQmOnIHGIdxrc_NoVAkyYI0T4JXeN2RvkIf4bRz4m9GQaVRR" />
+                    <div
+                        class="absolute top-4 right-4 bg-primary text-white text-[10px] font-black px-3 py-1 uppercase rounded-full tracking-widest">
+                        Available</div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold uppercase italic tracking-tight">Aether X</h3>
+                        <span class="text-primary text-xs font-mono font-bold">CORE_01</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 mb-8 py-6 border-y border-white/5">
+                        <div class="flex flex-col">
+                            <span
+                                class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">0-60</span>
+                            <span class="text-sm font-bold text-primary">1.8s</span>
+                        </div>
+                        <div class="flex flex-col border-x border-white/5 px-4 text-center">
+                            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Top</span>
+                            <span class="text-sm font-bold">250mph</span>
+                        </div>
+                        <div class="flex flex-col text-right">
+                            <span
+                                class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Range</span>
+                            <span class="text-sm font-bold text-primary">520mi</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-4 border border-primary/30 hover:bg-primary hover:text-white text-primary rounded-xl text-xs font-bold uppercase tracking-widest transition-all">
+                        View Specs
+                    </button>
+                </div>
+            </div>
+
+            <!-- Car 2: Volt S-1 -->
+            <div
+                class="bg-surface-dark border border-white/5 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+                <div class="relative aspect-[16/10] overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Electric glowing blue sports car"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4o6moJqfqxOZOaUC-kspPxCV0pg8qxuFm5kmpYXUKg-EdcaqYvdIiMOoL4vlvo9lff_lFovJoEjlO3D9JVgrkHwsd_euUPIVMJjj2pUFS_HcED0V4IHoVYDvpf1Cp6aKJFBmbHBV-0FRIChUV1gNLgudENpmji5C2GM-FOLHO-SFmscWhha0-QICHZb4idwVl-3I8-NQ29EoLb0AFS2af5papL9bAV7BJAgnoPh5iWaL7fo6w4VsrTxeeaJBAov8RInrmfycrOXz7" />
+                    <div
+                        class="absolute top-4 right-4 bg-white/10 text-white text-[10px] font-black px-3 py-1 uppercase rounded-full tracking-widest backdrop-blur-md">
+                        Pre-Order</div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold uppercase italic tracking-tight">Volt S-1</h3>
+                        <span class="text-slate-500 text-xs font-mono font-bold">BATT_04</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 mb-8 py-6 border-y border-white/5">
+                        <div class="flex flex-col">
+                            <span
+                                class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">0-60</span>
+                            <span class="text-sm font-bold text-primary">2.1s</span>
+                        </div>
+                        <div class="flex flex-col border-x border-white/5 px-4 text-center">
+                            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Top</span>
+                            <span class="text-sm font-bold">230mph</span>
+                        </div>
+                        <div class="flex flex-col text-right">
+                            <span
+                                class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Range</span>
+                            <span class="text-sm font-bold text-primary">480mi</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-4 border border-primary/30 hover:bg-primary hover:text-white text-primary rounded-xl text-xs font-bold uppercase tracking-widest transition-all">
+                        View Specs
+                    </button>
+                </div>
+            </div>
+
+            <!-- More cars can be added here following the same structure -->
+            <!-- Car 3: Nova Hyper -->
+            <div
+                class="bg-surface-dark border border-white/5 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+                <div class="relative aspect-[16/10] overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Extreme aerodynamics concept car"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZsoDH_WKAUw0C1B8PEQU0DxjE_7BeFx_WH31FB6jeAnfw5CZvF3ZV6gqNzX-JJXhzBvSnYGJp6qoHwEogZNSQOcGO9MjL8WhsW3HTIsGYG2ZP70URnexA0KNW4mkbmnUBB-wFxFIGvyRy5QxJzR2gSCZs5n-PPeLmUw4MtKilhLSTTgvA6t-dfD_b3dQ3dmGJclbTcgviW0E45PJzmvffpBhx66DgYo_GIbuHStoI7fztDTiu4vj2EgTEBZ40sJNflZqHfjUH9BGR" />
+                    <div
+                        class="absolute top-4 right-4 bg-primary text-white text-[10px] font-black px-3 py-1 uppercase rounded-full tracking-widest">
+                        Available</div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold uppercase italic tracking-tight">Nova Hyper</h3>
+                        <span class="text-primary text-xs font-mono font-bold">AERO_09</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 mb-8 py-6 border-y border-white/5">
+                        <div class="flex flex-col">
+                            <span
+                                class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">0-60</span>
+                            <span class="text-sm font-bold text-primary">1.8s</span>
+                        </div>
+                        <div class="flex flex-col border-x border-white/5 px-4 text-center">
+                            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Top</span>
+                            <span class="text-sm font-bold">280mph</span>
+                        </div>
+                        <div class="flex flex-col text-right">
+                            <span
+                                class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Range</span>
+                            <span class="text-sm font-bold text-primary">420mi</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-4 border border-primary/30 hover:bg-primary hover:text-white text-primary rounded-xl text-xs font-bold uppercase tracking-widest transition-all">
+                        View Specs
+                    </button>
+                </div>
+            </div>
+            <!-- Car 4: Zenith -->
+            <div
+                class="bg-surface-dark border border-white/5 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
+                <div class="relative aspect-[16/10] overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Final extreme flagship hypercar"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJTFzaykwNzf1ryd6VukszrJ6nXZs8TzmQYi631U4A-COHGl1Yep7NHXh_uGoC823NKix1sb_I04vIZjIB6n138kWp0_QyFjBpjZq_KKsW4pQJUu1k_hUZfnfZ6GOt-7NSTGUI2kq1ERtGqmQZmcdVgUlGnBbWnbb7MWvM3beW_-Snk57BJmsYDovFQySoG51ElCAm0Brx2j3klcfkGpRvpCSUV_CGHz5Q93eWIfD2lDTKMo3u407vOD1wMMuLRpCAwJzd1zbCq4n" />
+                    <div
+                        class="absolute top-4 right-4 bg-primary text-white text-[10px] font-black px-3 py-1 uppercase rounded-full tracking-widest">
+                        Flagship</div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold uppercase italic tracking-tight">Zenith</h3>
+                        <span class="text-primary text-xs font-mono font-bold">PEAK_99</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 mb-8 py-6 border-y border-white/5">
+                        <div class="flex flex-col">
+                            <span
+                                class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">0-60</span>
+                            <span class="text-sm font-bold text-primary">2.2s</span>
+                        </div>
+                        <div class="flex flex-col border-x border-white/5 px-4 text-center">
+                            <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Top</span>
+                            <span class="text-sm font-bold">235mph</span>
+                        </div>
+                        <div class="flex flex-col text-right">
+                            <span
+                                class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Range</span>
+                            <span class="text-sm font-bold text-primary">500mi</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-4 border border-primary/30 hover:bg-primary hover:text-white text-primary rounded-xl text-xs font-bold uppercase tracking-widest transition-all">
+                        View Specs
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Section -->
+        <div class="mt-24 text-center">
+            <button class="group flex flex-col items-center gap-4 mx-auto">
+                <span class="text-slate-500 uppercase text-xs font-bold tracking-[0.4em]">Explore More
+                    Engineering</span>
+                <div
+                    class="size-14 rounded-full border border-white/10 flex items-center justify-center group-hover:border-primary transition-all group-hover:bg-primary/5 neon-border">
+                    <span
+                        class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-all animate-bounce">expand_more</span>
+                </div>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="bg-background-dark pt-20 pb-10 px-6 lg:px-12 border-t-2 border-primary/40 shadow-[0_-20px_40px_-20px_rgba(6,249,6,0.3)]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="size-10 bg-primary rounded flex items-center justify-center text-white neon-glow">
+                            <span class="material-symbols-outlined text-2xl">electric_car</span>
+                        </div>
+                        <h2 class="text-2xl font-bold tracking-tighter uppercase italic">Driveway Dreams</h2>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-xs mb-8">
+                        Leading the transition to a world of high-performance sustainable mobility through advanced
+                        robotics and neural intelligence.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all group"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all group"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Navigation</h5>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors"
+                                href="showroom.html">Showroom</a></li>
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors"
+                                href="#">Pre-owned</a></li>
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Fleet
+                                Sales</a></li>
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors"
+                                href="code.html">Technology</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Support</h5>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors"
+                                href="contact.html">Contact</a></li>
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Service
+                                Centers</a></li>
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Owners
+                                Manual</a></li>
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Legal</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Newsletter</h5>
+                    <p class="text-slate-400 text-xs mb-4">Stay ahead of the curve. Get the latest tech updates.</p>
+                    <div class="flex flex-col gap-2">
+                        <input
+                            class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm focus:ring-primary focus:border-primary"
+                            placeholder="Email Address" type="email" />
+                        <button
+                            class="bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase tracking-widest neon-glow">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-white/5 gap-6">
+                <p class="text-slate-500 text-xs">© 2024 Driveway Dreams Global. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-8 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+                    <a class="hover:text-primary" href="#">System Status</a>
+                    <a class="hover:text-primary" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary" href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

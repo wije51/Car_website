@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Driveway Dreams | Future of Velocity</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "neon-green": "#39ff14",
+                        "neon-purple": "#bc13fe",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0a0c12",
+                        "card-dark": "#161b2a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .neon-border-blue {
+            box-shadow: 0 0 15px rgba(37, 106, 244, 0.3);
+        }
+
+        .neon-text-green {
+            text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+        }
+
+        .neon-text-purple {
+            text-shadow: 0 0 8px rgba(188, 19, 254, 0.6);
+        }
+
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            background: rgba(22, 27, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #256af4, transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+        }
+
+        @keyframes scan {
+            0% {
+                top: 0;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30 selection:text-primary">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <header class="sticky top-0 z-50 w-full border-b border-white/10 glass-panel px-6 lg:px-20 py-4">
+            <div class="max-w-[1400px] mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-10">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <div class="size-8 text-primary">
+                            <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xl font-bold tracking-tighter uppercase italic">Driveway Dreams</h1>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="showroom.html">Inventory</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="showroom.html">Showroom</a>
+                        <a class="text-sm font-medium text-primary neon-text-blue" href="#">Intelligence</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="code.html">Tech</a>
+                        <a class="text-sm font-bold text-primary transition-colors uppercase tracking-widest"
+                            href="videoplayer.html">Watch Now</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="relative hidden sm:block">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                        <input
+                            class="bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none w-64"
+                            placeholder="Search Archives..." type="text" />
+                    </div>
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white text-xs font-bold uppercase tracking-widest px-6 py-2.5 rounded-lg shadow-lg shadow-primary/20 transition-all">
+                        Connect Gear
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 w-full max-w-[1400px] mx-auto px-6 lg:px-20 py-10">
+            <!-- Hero Featured Post -->
+            <section
+                class="relative group cursor-pointer mb-20 overflow-hidden rounded-xl border border-white/10 aspect-[21/9] flex items-end">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                    data-alt="Futuristic sleek supercar speeding on a neon highway"
+                    style="background-image: linear-gradient(to top, rgba(10, 12, 18, 0.9) 0%, rgba(10, 12, 18, 0.2) 60%, transparent 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBe40qHONVOv3fpY7tGfDslYaIEx1BzCmO-ohoiCLXJMATlT4LEgjYUPtHTdF-Rr2foNOWPoaXbUp4IACliJFftXY9LkgNYcO7HW9jXiMrRqHPvMjcA5WZ33_zXGRKAgrleR3iSe9kk75YWpXfew6mvm9R94ez9HjB6ocZdAo3flAc_vYetysX36acTK3iHcBXEiYI0cOt6vLSW_aEc_XQIhC8AHhYoNRN1Smi1bu930o99UGnDgJi2A1io_9MGoevkJ5Gb4oLBzZu_')">
+                </div>
+                <div class="relative p-8 lg:p-16 w-full max-w-4xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span
+                            class="px-3 py-1 bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-widest border border-primary/30 rounded">Featured
+                            Analysis</span>
+                        <span class="text-slate-400 text-xs font-medium">15 Min Read • Quantum Era 2.4</span>
+                    </div>
+                    <h2 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                        The Zenith GT: <span class="text-primary neon-text-blue">Breaking the Sound Barrier</span> on
+                        the Ground
+                    </h2>
+                    <p class="text-slate-300 text-lg mb-8 max-w-2xl line-clamp-2">
+                        Utilizing cold-fusion propulsion and active aero-molding, the Zenith GT isn't just a car—it's a
+                        kinetic sculpture capable of Mach 0.8 at sea level.
+                    </p>
+                    <button class="flex items-center gap-2 text-white font-bold group">
+                        <span
+                            class="text-sm uppercase tracking-widest border-b-2 border-primary pb-1 group-hover:text-primary transition-colors">Initiate
+                            Full Briefing</span>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="absolute top-0 right-0 p-8 flex flex-col items-end gap-2 text-right">
+                    <div class="text-[10px] text-neon-green neon-text-green font-mono uppercase tracking-tighter">System
+                        Status: Nominal</div>
+                    <div class="text-[10px] text-neon-purple neon-text-purple font-mono uppercase tracking-tighter">Core
+                        Temp: 4200K</div>
+                </div>
+            </section>
+            <!-- Grid Sections -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Latest News Column -->
+                <div class="lg:col-span-8 space-y-12">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <h3 class="text-2xl font-bold uppercase tracking-tighter flex items-center gap-3">
+                            <span class="size-2 bg-neon-green rounded-full shadow-[0_0_8px_#39ff14]"></span>
+                            Latest Transmissions
+                        </h3>
+                        <a class="text-xs font-bold text-slate-400 hover:text-primary uppercase tracking-widest"
+                            href="#">View Archives</a>
+                    </div>
+                    <div class="relative mb-10 group">
+                        <div
+                            class="absolute -inset-0.5 bg-gradient-to-r from-neon-green via-primary to-neon-purple rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000">
+                        </div>
+                        <div
+                            class="relative flex items-center bg-background-dark/80 border border-white/10 rounded-lg overflow-hidden">
+                            <div class="px-4 flex items-center border-r border-white/10 bg-white/5">
+                                <span
+                                    class="material-symbols-outlined text-neon-green neon-text-green text-xl">terminal</span>
+                            </div>
+                            <input
+                                class="w-full bg-transparent border-none text-slate-100 placeholder:text-slate-600 font-mono text-sm py-4 px-6 focus:ring-0 focus:outline-none uppercase tracking-widest"
+                                placeholder="EXECUTE_SEARCH_QUERY_..." type="text" />
+                            <div class="px-6 py-4 flex items-center gap-4 bg-white/5">
+                                <div class="hidden sm:flex flex-col items-end">
+                                    <span
+                                        class="text-[8px] text-neon-purple neon-text-purple font-bold uppercase leading-none mb-1">Encrypted</span>
+                                    <span class="text-[8px] text-slate-500 font-mono leading-none">SSL_CORE_v2</span>
+                                </div>
+                                <button
+                                    class="p-2 rounded bg-primary/20 hover:bg-primary/40 text-primary transition-all duration-300 border border-primary/30">
+                                    <span class="material-symbols-outlined">search</span>
+                                </button>
+                            </div>
+                            <div class="scanline pointer-events-none group-hover:animate-[scan_2s_linear_infinite]">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- News Card 1 -->
+                        <article class="group space-y-4">
+                            <div class="relative aspect-video rounded-lg overflow-hidden border border-white/5">
+                                <img class="w-full h-full object-cover transition-transform group-hover:scale-110"
+                                    data-alt="Modern minimalist luxury car dealership in Neo-Tokyo"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJSvd_wCz5lNqb_l4ZM4PF3lrhzB6kNRouMttOXUd-xbLQwaJK76cyvMKdNSUO6opwzuqwklq4zEmYM8IjcLbYVL9mKPVmX7HrBSi4dup33nfXrrUcLMh3-x28luny1HRop4maBlWfyK-yCN5xHVBtnzPIznCQo5T1CU8OnfYw9v9sytgtt01VCvj-aMhdyr-54XMHaWMaaT7sf3esMHgCuvAwH6ShZFF5IzO8BLy3GF7MXkuFJPzBqD2s7bYQMVRxE7M0uThYcGd_" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-4 px-2 py-1 bg-neon-purple/20 text-neon-purple text-[10px] font-bold uppercase rounded border border-neon-purple/30">Event</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="text-xl font-bold group-hover:text-primary transition-colors">Neo-Tokyo
+                                    Dealership Opening</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Experience decentralized luxury in the
+                                    heart of the cyber-city's new digital district. 100% holographic staff.</p>
+                                <div class="flex items-center justify-between pt-2">
+                                    <span class="text-[10px] text-slate-500 font-mono uppercase">Node: 772.4</span>
+                                    <button class="text-xs font-bold text-primary flex items-center gap-1">Read More
+                                        <span class="material-symbols-outlined text-xs">open_in_new</span></button>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- News Card 2 -->
+                        <article class="group space-y-4">
+                            <div class="relative aspect-video rounded-lg overflow-hidden border border-white/5">
+                                <img class="w-full h-full object-cover transition-transform group-hover:scale-110"
+                                    data-alt="Hypercar reveal event with laser lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAVXT0T6_NZ0ElssYlpYlYsCFTL4FxRBddZZVFPktC8gbOZIrrfsX_320MZTPX8vsyICk2_z6-S9cdfepyXpYtp5WzSAtUx9WdJsCVDSp4BAUQNGBC6rAsyaRLwYP3T8LTfPQ3t_1TGmRNt8tyGWJQ5PKn8XzidnY9vIPHdJyq2PjJSGtTfl5g2OLsFaAfFEZXjHg_gAvm4cI6QE7D3WruAo22OR2ff6dzOVhPX-m4psFPKPD2usc-i9BJJOenaZXdHkCkFHuE3t8i" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-4 px-2 py-1 bg-neon-green/20 text-neon-green text-[10px] font-bold uppercase rounded border border-neon-green/30">Hypercar</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="text-xl font-bold group-hover:text-primary transition-colors">The
+                                    Plasma-Series Reveal</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Witness the future of speed this
+                                    Friday. Only 50 units globally. Registration for the private auction is now live.
+                                </p>
+                                <div class="flex items-center justify-between pt-2">
+                                    <span class="text-[10px] text-slate-500 font-mono uppercase">Node: 901.0</span>
+                                    <button class="text-xs font-bold text-primary flex items-center gap-1">Read More
+                                        <span class="material-symbols-outlined text-xs">open_in_new</span></button>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- News Card 3 -->
+                        <article class="group space-y-4">
+                            <div class="relative aspect-video rounded-lg overflow-hidden border border-white/5">
+                                <img class="w-full h-full object-cover transition-transform group-hover:scale-110"
+                                    data-alt="Detail shot of a carbon fiber supercar wing"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrwmNBEp2zH7PY8axr-kGKAaezpzQ7Ygv2vK8XHLJPFJLo4DVVU6Byi_W25Idv4N-WhM-PTVlXdG9dQ9UnMBDrd4EzmA8ypESjW3Ptv-27qu_wP2PEbqc0ilJ1j9T3kcsC34liN1ZWICz75StSTwcshKId9hnIADGoHoIvspQZGD_09iE9HzCRBq376qlxiDc_kZgjkadZYxehuhNHddHMzjiNvudVvbiXFvE2-ryXLuTAQjRohWnmBGWPi_YgYLznq0F3HPmlULfa" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-4 px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold uppercase rounded border border-primary/30">Limited</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="text-xl font-bold group-hover:text-primary transition-colors">Carbon-Ghost
+                                    Edition Drops</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Specialized invisibility coatings meet
+                                    track performance. The lightest vehicle in our history.</p>
+                                <div class="flex items-center justify-between pt-2">
+                                    <span class="text-[10px] text-slate-500 font-mono uppercase">Node: 112.5</span>
+                                    <button class="text-xs font-bold text-primary flex items-center gap-1">Read More
+                                        <span class="material-symbols-outlined text-xs">open_in_new</span></button>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- News Card 4 -->
+                        <article class="group space-y-4">
+                            <div class="relative aspect-video rounded-lg overflow-hidden border border-white/5">
+                                <img class="w-full h-full object-cover transition-transform group-hover:scale-110"
+                                    data-alt="Night cityscape with streaks of light from cars"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Opz7BY15sMcrIACu2yYuLoplqTWk7vmRATZq5IZ07tsplEqzTMsuYaPSojZcJCXwG67V8ABPapbv2QWcsll_FJI1qK7Gg-IiC2igo_-CDXRS1x2_l72soTWzb38JhgccNdvWvAjanMJvxRymT7TvSlnLIQb_rg9v36kXg6LRi9ZK6H8ylQAE4AmHQuaJwlw4ewhDyjZG66g7zoSRKeaBXOGjRZf7ufH__hadHLvxOD5Jcdca61xIQBYS5gbb52snxSYAeayZR9EW" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-4 px-2 py-1 bg-neon-purple/20 text-neon-purple text-[10px] font-bold uppercase rounded border border-neon-purple/30">Infrastructure</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="text-xl font-bold group-hover:text-primary transition-colors">Quantum
+                                    Charging Network Expansion</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">We've completed the first phase of
+                                    zero-latency energy transfer across North America.</p>
+                                <div class="flex items-center justify-between pt-2">
+                                    <span class="text-[10px] text-slate-500 font-mono uppercase">Node: 334.8</span>
+                                    <button class="text-xs font-bold text-primary flex items-center gap-1">Read More
+                                        <span class="material-symbols-outlined text-xs">open_in_new</span></button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!-- Sidebar / Tech Innovations -->
+                <aside class="lg:col-span-4 space-y-10">
+                    <div class="glass-panel rounded-xl p-8 border-primary/20 neon-border-blue">
+                        <h3 class="text-xl font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">biotech</span>
+                            Tech Innovations
+                        </h3>
+                        <div class="space-y-8">
+                            <div class="group cursor-pointer">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[10px] font-bold text-neon-green uppercase tracking-widest">Active
+                                        Status</span>
+                                    <span class="text-[10px] text-slate-500">v4.0.2</span>
+                                </div>
+                                <h5 class="text-sm font-bold uppercase group-hover:text-primary transition-colors mb-2">
+                                    Quantum-Drive Transmission</h5>
+                                <p class="text-xs text-slate-400 leading-relaxed">Zero-shifting technology utilizing
+                                    entangled particle synchronicity for instantaneous torque application.</p>
+                                <div class="mt-4 w-full h-1 bg-white/5 overflow-hidden">
+                                    <div class="h-full bg-primary w-2/3"></div>
+                                </div>
+                            </div>
+                            <div class="group cursor-pointer">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[10px] font-bold text-neon-purple uppercase tracking-widest">In
+                                        Development</span>
+                                    <span class="text-[10px] text-slate-500">v0.9.1</span>
+                                </div>
+                                <h5 class="text-sm font-bold uppercase group-hover:text-primary transition-colors mb-2">
+                                    Holographic Dashboards</h5>
+                                <p class="text-xs text-slate-400 leading-relaxed">Direct-to-retina neural projection
+                                    that eliminates the need for physical glass or displays.</p>
+                                <div class="mt-4 w-full h-1 bg-white/5 overflow-hidden">
+                                    <div class="h-full bg-neon-purple w-1/3"></div>
+                                </div>
+                            </div>
+                            <div class="group cursor-pointer">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span
+                                        class="text-[10px] font-bold text-neon-green uppercase tracking-widest">Certified</span>
+                                    <span class="text-[10px] text-slate-500">v2.5.0</span>
+                                </div>
+                                <h5 class="text-sm font-bold uppercase group-hover:text-primary transition-colors mb-2">
+                                    AI Drift Control</h5>
+                                <p class="text-xs text-slate-400 leading-relaxed">Next-gen physics modeling allows any
+                                    driver to perform professional grade maneuvers safely.</p>
+                                <div class="mt-4 w-full h-1 bg-white/5 overflow-hidden">
+                                    <div class="h-full bg-neon-green w-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-10 py-3 border border-primary/40 text-primary text-[10px] font-bold uppercase tracking-[0.3em] rounded-lg hover:bg-primary hover:text-white transition-all">
+                            View Tech Deck
+                        </button>
+                    </div>
+                    <!-- Transmission Box (Newsletter) -->
+                    <div class="bg-primary/10 border border-primary/20 rounded-xl p-8 relative overflow-hidden">
+                        <div class="absolute -right-10 -bottom-10 opacity-10">
+                            <span class="material-symbols-outlined text-[160px]">cell_tower</span>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Join the Stream</h4>
+                        <p class="text-xs text-slate-400 mb-6">Receive daily telemetry data and exclusive early access
+                            to new prototype drops.</p>
+                        <form class="space-y-4 relative z-10">
+                            <input
+                                class="w-full bg-background-dark/50 border border-white/10 rounded-lg px-4 py-3 text-xs font-mono focus:ring-1 focus:ring-primary focus:border-primary outline-none uppercase placeholder:text-slate-600"
+                                placeholder="NEURAL_ID@HOST.NET" type="email" />
+                            <button
+                                class="w-full bg-primary text-white text-[10px] font-bold uppercase tracking-widest py-3 rounded-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                                Start Transmission <span class="material-symbols-outlined text-sm">sensors</span>
+                            </button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+            <!-- Horizontal Carousel (Bottom) -->
+            <section class="mt-24 space-y-8">
+                <div class="flex items-center gap-4">
+                    <h3 class="text-2xl font-bold uppercase tracking-tighter">Elite Inventory</h3>
+                    <div class="h-[1px] flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>
+                </div>
+                <div class="flex gap-6 overflow-x-auto pb-8 snap-x no-scrollbar">
+                    <div class="min-w-[320px] snap-start glass-panel rounded-xl overflow-hidden group">
+                        <div class="aspect-[4/3] relative">
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                data-alt="Close up of a futuristic car headlight"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuRXEc79agOKdvcLOvjQ1HCQdsrH2FTzop7wHBEgetHh0RX0F6ZkpM-lCqTPQNTAyrZXO_qR8d6xW-Bd3odYt5QCrHuWlOUJluTIPI9Xg9bW8uPeJAYKKg3PbqRvy9-DQmK9xfzUqM2wHQEk8t3Dqlom1xva-wmgppvcPt3YbwEm_giydHWxlAgIAC0kgGvu6p_gnD93x5Cja4z6qVLOvxrvhSE4YWcnMx6g9eMK1qLs1M8TxfI14DG9mjluWBQ-osJplws12XZa5k" />
+                            <div class="absolute top-4 right-4 text-primary neon-text-blue font-bold">2.4s 0-100</div>
+                        </div>
+                        <div class="p-6">
+                            <h6 class="font-bold text-lg">Vortex RS-7</h6>
+                            <p class="text-xs text-slate-500 mt-1">Available for Digital Reserve</p>
+                        </div>
+                    </div>
+                    <div class="min-w-[320px] snap-start glass-panel rounded-xl overflow-hidden group">
+                        <div class="aspect-[4/3] relative">
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                data-alt="Dashboard of a futuristic vehicle with glowing screens"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXxWVGAX1s4Eih0b-1ROpKH5E39G7FvW-LosQ_rGkRnDRCBaL7hvq2X6I755kx5PsuVqYqdVWq6KFfmDGi2cCD5gEk6F8QFeTyVjyTgGtdgAN4GIehIXZBQfhmxfV6dfVwCUlVe39f7gEfYjBH8LibHD7ydNquX8oZDJnhwyir3Pwd96io3Q6FffBh9iGZsBALj1sHMbNf6f88mfLigldKXqDNi3oS5wuqwNz9qRsE16EFbf4ZfKyoMT_Mz-V26l0hnvIGFNx6eQxi" />
+                            <div class="absolute top-4 right-4 text-neon-purple neon-text-purple font-bold">Hyper-Class
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h6 class="font-bold text-lg">Ion Spectre</h6>
+                            <p class="text-xs text-slate-500 mt-1">Prototype Phase: Delta</p>
+                        </div>
+                    </div>
+                    <div class="min-w-[320px] snap-start glass-panel rounded-xl overflow-hidden group">
+                        <div class="aspect-[4/3] relative">
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                data-alt="Rear view of a supercar with glowing tail lights"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6h6IyVtl3RKtwQ2mL8l-SxlPFjIsNeAy8pP__v5PG4g0Za9Y3KHnBpX_HDuwy-Mv-_baMIGQR_vHNQsH_uw5T0e2QoamahXFlB5HLDoaEUXM8uEx6nDiM3qFcgOzRLanzn1eW6p5sZmsvujlbG0EoU8-gCiE2i7TdKA3UsqkG4q9X1CQuChzUgTDVgsKUHBAEF_2tk5Rnp3gLhdIE7pNvqjnBgAfiRW5Un9wTV_DGVHNkLJI1Imflju2BxnOdX1jKm4Mme-0VlVz8" />
+                            <div class="absolute top-4 right-4 text-neon-green neon-text-green font-bold">Lvl 5
+                                Autonomous</div>
+                        </div>
+                        <div class="p-6">
+                            <h6 class="font-bold text-lg">Aetheria X</h6>
+                            <p class="text-xs text-slate-500 mt-1">Now in Showrooms</p>
+                        </div>
+                    </div>
+                    <div class="min-w-[320px] snap-start glass-panel rounded-xl overflow-hidden group">
+                        <div class="aspect-[4/3] relative">
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                data-alt="Interior of a luxury supercar with carbon fiber details"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI9DaQYuvPDwLxuxXUmC8dcc_yxQI1y9l-pb5BpaI-I6tvVV8XV4QntYhlh4dak8_GYS4hYJHV-X74EeUFhXnpt1pGLhIxHk8CYXvCT_0A2nRvFpTF9kgT1BdrxTU2YW0xwOp6_B4sIKWaKol6YXOWryWzXt96i93VQq7zRWTxOrhPQ8qzGThi6IvZXiXm1-QhBHducIeq5LPIVij633H3P3sVlDevuuP6wSMZLwwUUnx0-4KNc9AtZz7Z8_fwCM0n4CcNMzSk7lCQ" />
+                            <div class="absolute top-4 right-4 text-primary font-bold">Fusion Core</div>
+                        </div>
+                        <div class="p-6">
+                            <h6 class="font-bold text-lg">Project Chronos</h6>
+                            <p class="text-xs text-slate-500 mt-1">Internal Classified Release</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="border-t border-white/10 py-16 px-6 lg:px-20 mt-20 bg-background-dark/80">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="size-6 text-primary">
+                            <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-lg font-bold tracking-tighter uppercase italic">Driveway Dreams</h1>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed uppercase tracking-widest">Architecting the future
+                        of human mobility through extreme velocity and digital luxury.</p>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="text-sm font-bold uppercase tracking-widest text-primary">Network</h5>
+                    <ul class="space-y-2 text-xs font-medium text-slate-400">
+                        <li><a class="hover:text-white" href="#">Neo-Tokyo Hub</a></li>
+                        <li><a class="hover:text-white" href="#">Mars Settlement Delta</a></li>
+                        <li><a class="hover:text-white" href="#">New York Vertical</a></li>
+                        <li><a class="hover:text-white" href="#">London Underground</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="text-sm font-bold uppercase tracking-widest text-neon-green">Intelligence</h5>
+                    <ul class="space-y-2 text-xs font-medium text-slate-400">
+                        <li><a class="hover:text-white" href="#">Technical Documentation</a></li>
+                        <li><a class="hover:text-white" href="#">Neural Integration API</a></li>
+                        <li><a class="hover:text-white" href="#">Propulsion Research</a></li>
+                        <li><a class="hover:text-white" href="#">Cyber-Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4 text-right md:text-left">
+                    <h5 class="text-sm font-bold uppercase tracking-widest text-neon-purple">System Time</h5>
+                    <p class="text-2xl font-mono font-bold text-slate-300">22:42:08</p>
+                    <p class="text-[10px] text-slate-500 uppercase tracking-widest">Earth Standard Time (EST)</p>
+                </div>
+            </div>
+            <div
+                class="max-w-[1400px] mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-600 uppercase tracking-widest font-bold">
+                <p>© 2099 Driveway Dreams Interstellar. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Protocol</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Synchronization</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <style>
+        /* Custom scrollbar for horizontal carousel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @keyframes scan {
+            0% {
+                top: 0;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
