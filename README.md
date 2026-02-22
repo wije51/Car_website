@@ -14,8 +14,9 @@ View the live site here: [Driveway Dreams Live](https://car-website-sandy.vercel
 ## 🛠️ Built With
 * **HTML5 & CSS3:** For structuring and luxurious styling.
 * **JavaScript:** For handling interactive functionality and dynamic functionality.
-* **AI-Driven Workflow:** Built with **Stitch** for UI design and **AntiGravity** for logical implementation.
+* **AI-Driven Workflow:** Built with **Stitch** for UI design and **AntiGravity** for logical implementation and code optimization.
 * **Vercel:** For high-speed cloud hosting and deployment.
+
 
 ## 📂 Project Structure
 * `index.html` - The root entry point of the web app.
