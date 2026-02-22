@@ -91,9 +91,10 @@
                 <div
                     class="relative aspect-video rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl group neon-glow">
                     <iframe id="main-player" class="w-full h-full"
-                        src="https://www.youtube.com/embed/XUf5vNgMFoc?autoplay=0&rel=0" frameborder="0"
+                        src="https://www.youtube-nocookie.com/embed/XUf5vNgMFoc?autoplay=0&rel=0&enablejsapi=1&origin=https://www.youtube.com"
+                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
 
                 <!-- Info -->
@@ -228,17 +229,11 @@
             const player = document.getElementById('main-player');
             const titleElement = document.getElementById('video-title');
 
-            // Set new video source
-            player.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+            // Use nocookie domain and add origin param to help with file:// restrictions
+            player.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&enablejsapi=1&origin=https://www.youtube.com`;
 
-            // Update title
             titleElement.textContent = title;
-
-            // Scroll to top of player
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 
