@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en">
 
 <head>
@@ -9,13 +8,10 @@
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
@@ -45,6 +41,8 @@
     <style>
         body {
             font-family: 'Space Grotesk', sans-serif;
+            /* සාමාන්‍ය මවුස් එක හංගන්න */
+            cursor: none;
         }
 
         .neon-glow {
@@ -64,12 +62,39 @@
         .hero-gradient {
             background: linear-gradient(to bottom, rgba(5, 5, 5, 0.2) 0%, rgba(5, 5, 5, 0.9) 100%);
         }
+
+        /* --- Custom Cursor Styles --- */
+        .custom-cursor {
+            width: 12px;
+            height: 12px;
+            background-color: #06f906;
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+            box-shadow: 0 0 15px #06f906, 0 0 30px #06f906;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+
+        /* Button එකක් උඩට ගියාම වෙනස් වන හැටි */
+        .cursor-hover {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(6, 249, 6, 0.1);
+            border: 1px solid #06f906;
+            box-shadow: 0 0 20px rgba(6, 249, 6, 0.5);
+        }
     </style>
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased selection:bg-primary selection:text-white">
-    <!-- Top Navigation -->
+    
+    <div class="custom-cursor"></div>
+
     <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 px-6 lg:px-12 py-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-10">
@@ -112,7 +137,7 @@
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
+
     <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" data-alt="Futuristic supercar on a wet neon street at night"
@@ -148,7 +173,7 @@
             <span class="material-symbols-outlined animate-bounce">keyboard_double_arrow_down</span>
         </div>
     </section>
-    <!-- Featured Supercars -->
+
     <section id="inventory" class="py-24 px-6 lg:px-12 bg-background-dark">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
@@ -168,7 +193,6 @@
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Car Card 1 -->
                 <div
                     class="group bg-surface-dark rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
                     <div class="relative h-64 overflow-hidden">
@@ -210,7 +234,6 @@
                         </button>
                     </div>
                 </div>
-                <!-- Car Card 2 -->
                 <div
                     class="group bg-surface-dark rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
                     <div class="relative h-64 overflow-hidden">
@@ -249,7 +272,6 @@
                         </button>
                     </div>
                 </div>
-                <!-- Car Card 3 -->
                 <div
                     class="group bg-surface-dark rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2">
                     <div class="relative h-64 overflow-hidden">
@@ -291,7 +313,7 @@
             </div>
         </div>
     </section>
-    <!-- Why Choose Us / Bento Grid -->
+
     <section class="py-24 px-6 lg:px-12 bg-background-dark border-t border-white/5">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
@@ -301,7 +323,6 @@
                     with next-gen technology integrated into every fiber of our vehicles.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
-                <!-- Next-Gen AI -->
                 <div
                     class="md:col-span-2 md:row-span-1 glass-panel neon-border rounded-xl p-8 flex flex-col justify-between group hover:bg-primary/5 transition-all">
                     <div>
@@ -314,7 +335,6 @@
                             driving patterns for a fully personalized experience that anticipates your every need.</p>
                     </div>
                 </div>
-                <!-- Performance -->
                 <div
                     class="md:col-span-1 md:row-span-2 glass-panel neon-border rounded-xl p-8 flex flex-col justify-center text-center group hover:bg-primary/5 transition-all">
                     <div
@@ -332,7 +352,6 @@
                         <p class="text-[10px] uppercase font-bold tracking-widest">Maximum Efficiency</p>
                     </div>
                 </div>
-                <!-- Autonomy -->
                 <div
                     class="md:col-span-1 md:row-span-1 glass-panel neon-border rounded-xl p-8 flex flex-col items-start group hover:bg-primary/5 transition-all">
                     <div
@@ -343,7 +362,6 @@
                     <p class="text-slate-400 text-xs leading-relaxed">Level 5 autonomy powered by 360-degree LiDAR and
                         advanced AI vision.</p>
                 </div>
-                <!-- Sustainable -->
                 <div
                     class="md:col-span-2 md:row-span-1 rounded-xl p-8 flex items-center justify-between text-white overflow-hidden relative group bg-[#a855f7]">
                     <div class="relative z-10">
@@ -360,7 +378,7 @@
             </div>
         </div>
     </section>
-    <!-- Call to Action -->
+
     <section class="relative py-24 overflow-hidden">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" data-alt="High tech car cockpit with neon light dashboards"
@@ -381,7 +399,7 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
+
     <footer
         class="bg-background-dark pt-20 pb-10 px-6 lg:px-12 border-t-2 border-primary/40 shadow-[0_-20px_40px_-20px_rgba(37,106,244,0.3)]"
         style="border-top-color: #06f906; box-shadow: 0 -20px 40px -20px rgba(6, 249, 6, 0.3);">
@@ -440,7 +458,7 @@
                                 Centers</a></li>
                         <li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Owners
                                 Manual</a></li>
-                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Legal &amp;
+                        <li><a class="text-slate-400 text-sm hover:text-primary transition-colors" href="#">Legal &
                                 Privacy</a></li>
                     </ul>
                 </div>
@@ -466,6 +484,26 @@
             </div>
         </div>
     </footer>
-</body>
 
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+
+        // මවුස් එකත් එක්ක තිත යැවීම
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // වෙබ් එකේ තියෙන ඕනෑම Button එකක් හෝ Link එකක් උඩට මවුස් එක ගියාම තිත වෙනස් වෙන්න
+        const links = document.querySelectorAll('a, button, input, .cursor-pointer');
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+            });
+        });
+    </script>
+</body>
 </html>
